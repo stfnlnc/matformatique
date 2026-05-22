@@ -1,11 +1,46 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/inter-vf.ttf") format("truetype");
+}
+
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans:
+        "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    --color-mat-gradient-light: #e3e6ee;
+    --color-mat-gradient-dark: #c5d8ff;
+    --color-mat-light-blue: #c0d3ef;
+    --color-mat-mid-blue: #486da5;
+    --color-mat-dark-blue: #08286c;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        /* On recule de la moitié de la largeur totale du bloc (la taille du Groupe 1 + le gap associé) */
+        transform: translateX(
+            calc(-50% - 2.5rem)
+        ); /* 2.5rem correspond à la moitié de gap-20 (5rem / 2) */
+    }
+}
+
+.animate-marquee {
+    display: flex;
+    width: max-content; /* Force le conteneur à prendre toute la largeur de son contenu inline */
+    animation: marquee 40s linear infinite;
+}
+
+/* Optionnel : Met en pause le défilement au survol de la souris */
+.animate-marquee:hover {
+    animation-play-state: paused;
 }
