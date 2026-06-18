@@ -26,16 +26,63 @@
                     <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg" href="">Notre équipe</a>
                     <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg" href="">Vos avis</a>
                 </div>
-                <a class="bg-mat-dark-blue text-white text-sm px-2.5 py-2 rounded-lg" href="">Nous
-                    contacter</a>
-                <a class="bg-mat-light-blue text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg"
-                    href="">06.14.34.17.09</a>
+                <x-button-dark href="#contact-form">Nous contacter</x-button-dark>
+                <x-button-light href="tel:0614341709">06.14.34.17.09</x-button-light>
             </div>
         </nav>
     </header>
     <main>
         @yield('content')
     </main>
+    <footer class="w-full bg-mat-dark-blue px-12 py-14">
+        <div class="w-full container mx-auto flex flex-col gap-10">
+            <div class="flex flex-row items-start justify-between">
+                <div class="w-45 rounded-lg overflow-hidden">
+                    <img class="w-full aspect-square object-cover object-center" src="./images/logo-bot-full.png"
+                        alt="">
+                </div>
+                <div>
+                    <span class="text-mat-light-blue uppercase text-sm">Horaires</span>
+                    <br>
+                    <br>
+                    <span class="text-white uppercase text-sm">Atelier</span>
+                    <p class="text-white text-sm">
+                        Du lundi au vendredi - de 8h30 à 18h00 <br>
+                        Le samedi - de 10h à 12h30
+                    </p>
+                    <br>
+                    <span class="text-white uppercase text-sm">À domicile ou entreprise</span>
+                    <p class="text-white text-sm">
+                        Du lundi au vendredi <br>
+                        Uniquement sur rendez-vous
+                    </p>
+                </div>
+                <div>
+                    <span class="text-mat-light-blue uppercase text-sm">Contact</span>
+                    <br>
+                    <br>
+                    <a href="mailto:contact@matformatique.com" class="text-white text-sm">
+                        contact@matformatique.com
+                    </a>
+                    <br>
+                    <a href="tel:0614341709" class="text-white text-sm">
+                        06 14 34 17 09
+                    </a>
+                    <br>
+                    <p class="text-white text-sm">
+                        3 rue de Livron, 64000 Pau
+                    </p>
+                </div>
+            </div>
+            <div class="w-full border-t border-mat-mid-blue flex flex-row gap-10 pt-2.5">
+                <p class="text-sm text-mat-mid-blue">© 2026 Matformatique. Tous droits réservés.</p>
+                <a class="text-sm text-mat-mid-blue hover:text-mat-light-blue transition-colors duration-300"
+                    href="">Mentions légales.</a>
+                <a class="text-sm text-mat-mid-blue hover:text-mat-light-blue transition-colors duration-300"
+                    href="">Politique de confidentialité.</a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

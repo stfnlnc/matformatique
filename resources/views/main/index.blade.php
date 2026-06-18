@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="w-full h-lvh relative min-h-200 bg-linear-to-r from-mat-gradient-light to-mat-gradient-dark px-12 py-8">
-        <img class="w-96 absolute bottom-0 right-0" src="./images/angle-droit.png" alt="">
         <div class="container mx-auto flex flex-row w-full h-full">
             <div class="relative w-full h-full flex flex-col items-start justify-center gap-5">
                 <h1 class="text-5xl text-mat-dark-blue max-w-3xl">
@@ -15,10 +14,8 @@
                     et d'accompagnement dans vos projets.
                 </p>
                 <div class="flex flex-row gap-1">
-                    <a class="bg-mat-dark-blue text-white text-sm px-2.5 py-2 rounded-lg" href="">Nous
-                        contacter</a>
-                    <a class="bg-mat-light-blue text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg"
-                        href="">06.14.34.17.09</a>
+                    <x-button-dark href="#contact-form">Nous contacter</x-button-dark>
+                    <x-button-light href="tel:0614341709">06.14.34.17.09</x-button-light>
                 </div>
                 <p class="absolute bottom-0 left-0 text-sm text-mat-dark-blue uppercase">
                     ● OUVERT AUJOURD’HUI DE 8H30 À 18H00
@@ -142,15 +139,7 @@
                         Possibilité de prestation à domicile sous couvert du service à la personne par notre seconde
                         structure Matformatique Service
                     </p>
-                    <a class="group relative bg-mat-light-blue text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg overflow-hidden"
-                        href="">
-                        <div
-                            class="group-hover:top-1/2 group-hover:left-0 group-hover:-translate-y-1/2 scale-120 transition-all duration-700 absolute top-full left-full rounded-full w-full aspect-square bg-mat-dark-blue">
-                        </div>
-                        <div class="relative group-hover:text-mat-light-blue transition-colors duration-600">
-                            En savoir plus
-                        </div>
-                    </a>
+                    <x-button-light :href="route('main.home')">En savoir plus</x-button-light>
                 </div>
             </div>
         </div>
@@ -162,7 +151,7 @@
         </div>
     </div>
     <div class="w-full relative bg-mat-gradient-light px-12 py-30">
-        <img class="w-96 absolute bottom-0 left-0" src="./images/angle-gauche.png" alt="">
+        <img class="w-80 absolute bottom-0 right-0" src="./images/angle-droit.png" alt="">
         <div class="w-full container mx-auto flex flex-col gap-10">
             <div class="w-full flex flex-row">
                 <div class="w-1/2 flex flex-col gap-5">
@@ -341,32 +330,34 @@
                 <p class="text-sm text-mat-light-blue uppercase">
                     ● Nos partenaires
                 </p>
-
             </div>
         </div>
-        <div class="w-full mt-10">
-            <div class="flex flex-row gap-20 flex-nowrap min-w-full animate-marquee">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
 
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="" class="h-5 w-auto object-contain">
+        <div class="w-full mt-10 flex overflow-hidden select-none gap-20">
+            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+            </div>
+
+            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
             </div>
         </div>
     </div>
-    <div class="w-full bg-mat-gradient-light px-12 py-30">
+    <div class="relative w-full bg-mat-gradient-light px-12 py-30">
         <div class="w-full container mx-auto flex flex-col gap-10">
             <div class="w-full flex flex-row">
                 <div class="w-1/4">
@@ -494,6 +485,109 @@
                         <span class="uppercase">Catherine Bouillon</span> <br>
                         Il y a 2 mois
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact-form" class="relative w-full bg-mat-gradient-light px-12 py-30">
+        <img class="w-80 absolute bottom-0 left-0" src="./images/angle-gauche.png" alt="">
+        <div class="w-full container mx-auto flex flex-col gap-10">
+            <div class="w-full container mx-auto flex flex-col gap-10">
+                <div class="w-full flex flex-row">
+                    <div class="w-full flex flex-col gap-5">
+                        <p class="text-sm text-mat-mid-blue uppercase">
+                            ● Contact
+                        </p>
+                        <div class="w-3/4 flex flex-col gap-5 mb-12.5">
+                            <h1 class="text-5xl text-mat-dark-blue max-w-3xl">
+                                Besoin <span class="text-mat-mid-blue">d'aide ?</span>
+                            </h1>
+                            <p class="text-sm text-mat-dark-blue max-w-md">
+                                Que ce soit pour une réparation urgente ou juste un conseil, on est là. Appelez-nous, passez
+                                à l'atelier, ou envoyez-nous un message. On s'occupe du reste.
+                            </p>
+                        </div>
+                        <div class="flex flex-row gap-32 w-full">
+                            <div class="flex flex-col gap-5 w-full">
+                                <form class="w-full flex flex-col gap-2.5"
+                                    action="{{ route('contact.submit') }}#contact-form" method="POST">
+                                    @csrf
+
+                                    @if (session('success'))
+                                        <div style="color: green; margin-bottom: 15px;">{{ session('success') }}</div>
+                                    @endif
+
+                                    <div class="flex flex-col gap-2.5">
+                                        <label class="text-sm uppercase text-mat-dark-blue" for="name">Nom</label>
+                                        <input type="text" id="name" name="name" value="{{ old('name') }}"
+                                            required placeholder="John Smith"
+                                            class="p-2.5 bg-white rounded-lg text-sm text-mat-dark-blue">
+                                        @error('name')
+                                            <span style="color: red;">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="flex flex-col gap-2.5">
+                                        <label class="text-sm uppercase text-mat-dark-blue" for="phone">Téléphone
+                                        </label>
+                                        <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
+                                            placeholder="06 01 02 03 04"
+                                            class="p-2.5 bg-white rounded-lg text-sm text-mat-dark-blue">
+                                        @error('phone')
+                                            <span style="color: red;">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="flex flex-col gap-2.5">
+                                        <label class="text-sm uppercase text-mat-dark-blue" for="email">Email</label>
+                                        <input type="email" id="email" name="email" value="{{ old('email') }}"
+                                            required placeholder="john@example.com"
+                                            class="p-2.5 bg-white rounded-lg text-sm text-mat-dark-blue">
+                                        @error('email')
+                                            <span style="color: red;">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="flex flex-col gap-2.5">
+                                        <label class="text-sm uppercase text-mat-dark-blue" for="message">Message
+                                        </label>
+                                        <textarea id="message" name="message" required class="p-2.5 h-30 bg-white rounded-lg text-sm text-mat-dark-blue">{{ old('message') }}</textarea>
+                                        @error('message')
+                                            <span style="color: red;">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+
+                                    <button
+                                        class="cursor-pointer hover:bg-mat-mid-blue transition-colors duration-300 bg-mat-dark-blue text-white text-sm px-2.5 py-2 rounded-lg"
+                                        type="submit">Envoyer</button>
+                                </form>
+                            </div>
+                            <div class="flex flex-col gap-5 w-full">
+                                <div>
+                                    <span class="text-sm text-mat-mid-blue uppercase">Téléphone</span> <br>
+                                    <a href="tel:0614341709" class="text-mat-dark-blue text-2xl">06 14 34 17 09</a>
+                                </div>
+                                <div>
+                                    <span class="text-sm text-mat-mid-blue uppercase">Email</span> <br>
+                                    <a href="mailto:contact@matformatique.com"
+                                        class="text-mat-dark-blue text-2xl">contact@matformatique.com</a>
+                                </div>
+                                <div>
+                                    <span class="text-sm text-mat-mid-blue uppercase">Adresse</span> <br>
+                                    <div class="text-mat-dark-blue text-2xl">
+                                        3 rue de Livron, <br>
+                                        64000 Pau
+                                    </div>
+                                </div>
+                                <img class="w-full aspect-20/9 rounded-lg object-cover object-center"
+                                    src="./images/plan-matformatique.png" alt="">
+                                <div class="text-sm text-mat-mid-blue">
+                                    Notre zone primaire d'intervention est de 20 Kms autour de l'atelier et de 50 Kms pour
+                                    la secondaire.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

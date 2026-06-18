@@ -27,20 +27,6 @@
         transform: translateX(0%);
     }
     100% {
-        /* On recule de la moitié de la largeur totale du bloc (la taille du Groupe 1 + le gap associé) */
-        transform: translateX(
-            calc(-50% - 2.5rem)
-        ); /* 2.5rem correspond à la moitié de gap-20 (5rem / 2) */
+        transform: translateX(calc(-100% - 5rem));
     }
-}
-
-.animate-marquee {
-    display: flex;
-    width: max-content; /* Force le conteneur à prendre toute la largeur de son contenu inline */
-    animation: marquee 40s linear infinite;
-}
-
-/* Optionnel : Met en pause le défilement au survol de la souris */
-.animate-marquee:hover {
-    animation-play-state: paused;
 }
