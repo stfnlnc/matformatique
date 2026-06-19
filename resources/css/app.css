@@ -30,3 +30,7 @@
         transform: translateX(calc(-100% - 5rem));
     }
 }
+
+html {
+    scroll-behavior: smooth;
+}
