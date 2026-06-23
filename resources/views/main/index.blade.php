@@ -506,8 +506,8 @@
                 </p>
             </div>
         </div>
-        <div class="w-full mt-10 flex overflow-hidden select-none gap-20 mask-linear">
-            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee">
+        <div class="w-full mt-10 flex overflow-hidden select-none gap-8 md:gap-20 mask-linear">
+            <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee">
                 @foreach ($reviews as $review)
                     <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
                         <div class="flex flex-row text-white">
@@ -527,7 +527,7 @@
                     </div>
                 @endforeach
             </div>
-            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
+            <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
                 @foreach ($reviews as $review)
                     <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
                         <div class="flex flex-row text-white">
@@ -547,7 +547,7 @@
                     </div>
                 @endforeach
             </div>
-            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
+            <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
                 @foreach ($reviews as $review)
                     <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
                         <div class="flex flex-row text-white">
