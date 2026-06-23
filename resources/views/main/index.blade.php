@@ -315,8 +315,8 @@
                 </p>
             </div>
         </div>
-        <div class="w-full mt-10 flex overflow-hidden select-none gap-20 mask-linear">
-            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee">
+        <div class="w-full mt-10 flex overflow-hidden select-none gap-8 md:gap-20 mask-linear">
+            <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee">
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
                     <img src="./images/eset_logo.png" alt="Logo Eset" class="w-full object-contain object-center">
@@ -348,7 +348,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
+            <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
                     <img src="./images/eset_logo.png" alt="Logo Eset" class="w-full object-contain object-center">
@@ -379,7 +379,7 @@
                     <img src="./images/hp_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
                 </div>
             </div>
-            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
+            <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
                     <img src="./images/eset_logo.png" alt="Logo Eset" class="w-full object-contain object-center">
