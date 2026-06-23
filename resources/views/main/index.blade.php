@@ -33,7 +33,7 @@
             class="container px-4 mx-auto flex flex-row items-center justify-center lg:gap-30 gap-5 md:flex-nowrap flex-wrap">
             <div class="flex flex-col gap-2 text-center">
                 <div class="md:text-5xl text-3xl text-mat-light-blue">
-                    +15 ans
+                    +{{ $years }} ans
                 </div>
                 <div class="text-sm text-white">
                     ans d'expérience
@@ -41,7 +41,7 @@
             </div>
             <div class="flex flex-col gap-2 text-center">
                 <div class="md:text-5xl text-3xl text-mat-light-blue">
-                    +380
+                    +{{ $totalReviews }}
                 </div>
                 <div class="text-sm text-white">
                     avis Google
@@ -179,10 +179,10 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                            urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                            Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
-                            suscipit magna interdum eu. Curabitur pellentesque nibh.
+                            Nous vous accueillons en atelier ou prenons en charge votre demande par téléphone et formulaire
+                            en ligne. Lors de cette première étape, nous écoutons attentivement vos besoins et les symptômes
+                            de votre machine (lenteurs, panne matérielle, virus, écran cassé...). Nous enregistrons votre
+                            matériel en toute sécurité et créons votre dossier client personnalisé.
                         </div>
                     </div>
                     <div class="px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
@@ -208,14 +208,11 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                            urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                            Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
-                            suscipit magna interdum eu. Curabitur pellentesque nibh.
-                            Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
-                            suscipit magna interdum eu. Curabitur pellentesque nibh. Maecenas vitae mattis tellus. Nullam
-                            quis imperdiet augue. Vestibulum auctor ornare leo, non
-                            suscipit magna interdum eu. Curabitur pellentesque nibh.
+                            Nos techniciens qualifiés procèdent à une série de tests approfondis sur votre équipement. Nous
+                            analysons les composants matériels (disque dur, mémoire RAM, carte mère...) et l'état du système
+                            d'exploitation afin d'identifier précisément l'origine de la panne ou des dysfonctionnements. Ce
+                            check-up complet nous permet de vous proposer la solution de réparation ou d'optimisation la
+                            plus adaptée et la plus durable pour votre ordinateur.
                         </div>
                     </div>
                     <div class="px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
@@ -241,10 +238,10 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                            urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                            Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
-                            suscipit magna interdum eu. Curabitur pellentesque nibh.
+                            À la suite du diagnostic, nous vous transmettons un devis clair, détaillé et transparent,
+                            comprenant le coût de la main-d'œuvre et des éventuelles pièces de rechange. Aucun frais
+                            supplémentaire n'est engagé sans votre accord. Nous vous expliquons les différentes options
+                            possibles pour que vous puissiez prendre votre décision en toute sérénité.
                         </div>
                     </div>
                     <div class="px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
@@ -270,12 +267,11 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                            urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                            Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
-                            suscipit magna interdum eu. Curabitur pellentesque nibh.
-                            Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
-                            suscipit magna interdum eu. Curabitur pellentesque nibh.
+                            Une fois le devis validé, nos experts interviennent sur votre matériel dans les plus brefs
+                            délais. Qu'il s'agisse d'un remplacement de composant, d'une suppression de logiciels
+                            malveillants, d'une réinstallation de système ou d'une récupération de données, nous travaillons
+                            avec soin et minutie. Avant de clore l'intervention, nous effectuons une batterie de tests de
+                            contrôle pour nous assurer du parfait fonctionnement de votre appareil.
                         </div>
                     </div>
                     <div class="px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
@@ -301,10 +297,10 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                            urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                            Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
-                            suscipit magna interdum eu. Curabitur pellentesque nibh.
+                            Votre ordinateur est prêt ! Nous vous contactons pour convenir de sa restitution. Lors de la
+                            remise, nous prenons le temps de vous montrer le résultat, de vous expliquer les réparations
+                            effectuées et de vous donner des conseils personnalisés pour prolonger la durée de vie de votre
+                            machine. Vous repartez avec un matériel fonctionnel, garanti et prêt à l'emploi.
                         </div>
                     </div>
                 </div>
@@ -315,32 +311,104 @@
         <div class="container px-4 mx-auto flex flex-row items-center justify-between gap-5">
             <div class="w-1/2 flex flex-col gap-5">
                 <p class="text-sm text-mat-light-blue uppercase">
-                    ● Nos partenaires
+                    ● Nos marques
                 </p>
             </div>
         </div>
-
-        <div class="w-full mt-10 flex overflow-hidden select-none gap-20">
+        <div class="w-full mt-10 flex overflow-hidden select-none gap-20 mask-linear">
             <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/eset_logo.png" alt="Logo Eset" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/synology_logo.png" alt="Logo Synology"
+                        class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/asus_logo.png" alt="Logo Asus" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/msi_logo.png" alt="Logo Msi" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/lenovo_logo.png" alt="Logo Lenovo" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/canon_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/hp_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                </div>
             </div>
 
             <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
-                <img src="./images/logo.png" alt="Logo" class="h-5 w-auto object-contain">
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/eset_logo.png" alt="Logo Eset" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/synology_logo.png" alt="Logo Synology"
+                        class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/asus_logo.png" alt="Logo Asus" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/msi_logo.png" alt="Logo Msi" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/lenovo_logo.png" alt="Logo Lenovo" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/canon_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/hp_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                </div>
+            </div>
+            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/eset_logo.png" alt="Logo Eset" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/synology_logo.png" alt="Logo Synology"
+                        class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/asus_logo.png" alt="Logo Asus" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/msi_logo.png" alt="Logo Msi" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/lenovo_logo.png" alt="Logo Lenovo" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/canon_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img src="./images/hp_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                </div>
             </div>
         </div>
     </div>
@@ -357,7 +425,8 @@
                         Venez à la rencontre de <span class="text-mat-mid-blue">notre équipe</span>
                     </h1>
                     <p class="text-sm text-mat-dark-blue max-w-md">
-                        Derrière chaque réparation, il y a une personne à l’écoute et passionnée. Nous prenons soin de votre
+                        Derrière chaque réparation, il y a une personne à l’écoute et passionnée. Nous prenons soin de
+                        votre
                         matériel avec attention, en privilégiant la confiance et le contact humain.
                     </p>
                 </div>
@@ -369,15 +438,17 @@
                         <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
                             src="./images/team.jpg" alt="">
                         <h2 class="text-2xl text-mat-dark-blue uppercase mt-5">
-                            John Smith
+                            Mathieu Pellet
                         </h2>
                         <p class="text-sm text-mat-dark-blue">
                             Fondateur
                         </p>
                     </div>
                     <p class="text-sm text-mat-dark-blue mt-auto">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
+                        urna.
+                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
+                        vitae
                         mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna
                         interdum eu. Curabitur pellentesque nibh.
                     </p>
@@ -388,15 +459,17 @@
                         <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
                             src="./images/team.jpg" alt="">
                         <h2 class="text-2xl text-mat-dark-blue uppercase mt-5">
-                            John Smith
+                            Joel Ferreira
                         </h2>
                         <p class="text-sm text-mat-dark-blue">
                             Fondateur
                         </p>
                     </div>
                     <p class="text-sm text-mat-dark-blue mt-auto">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
+                        urna.
+                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
+                        vitae
                         mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna
                         interdum eu. Curabitur pellentesque nibh.
                     </p>
@@ -407,15 +480,17 @@
                         <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
                             src="./images/team.jpg" alt="">
                         <h2 class="text-2xl text-mat-dark-blue uppercase mt-5">
-                            John Smith
+                            Stéfan Lancelot
                         </h2>
                         <p class="text-sm text-mat-dark-blue">
                             Fondateur
                         </p>
                     </div>
                     <p class="text-sm text-mat-dark-blue mt-auto">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
+                        urna.
+                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
+                        vitae
                         mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna
                         interdum eu. Curabitur pellentesque nibh.
                     </p>
@@ -423,14 +498,75 @@
             </div>
         </div>
     </div>
-    <div id="vos-avis" class="w-full bg-mat-dark-blue py-30 overflow-hidden">
-        <div class="container px-4 mx-auto flex flex-col items-start justify-between gap-10">
-            <div class="md:w-1/2 flex flex-col gap-5">
+    <div class="w-full bg-mat-dark-blue py-30 overflow-hidden">
+        <div class="container px-4 mx-auto flex flex-row items-center justify-between gap-5">
+            <div class="w-1/2 flex flex-col gap-5">
                 <p class="text-sm text-mat-light-blue uppercase">
                     ● Vos avis
                 </p>
             </div>
-
+        </div>
+        <div class="w-full mt-10 flex overflow-hidden select-none gap-20 mask-linear">
+            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee">
+                @foreach ($reviews as $review)
+                    <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
+                        <div class="flex flex-row text-white">
+                            <x-star></x-star>
+                            <x-star></x-star>
+                            <x-star></x-star>
+                            <x-star></x-star>
+                            <x-star></x-star>
+                        </div>
+                        <p class="text-white text-sm">
+                            “{{ $review['text'] }}”
+                        </p>
+                        <div class="flex flex-col text-mat-light-blue text-sm">
+                            <span class="uppercase">{{ $review['author_name'] }}</span>
+                            <span class="">{{ $review['relative_time_description'] }}</span>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
+                @foreach ($reviews as $review)
+                    <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
+                        <div class="flex flex-row text-white">
+                            <x-star></x-star>
+                            <x-star></x-star>
+                            <x-star></x-star>
+                            <x-star></x-star>
+                            <x-star></x-star>
+                        </div>
+                        <p class="text-white text-sm">
+                            “{{ $review['text'] }}”
+                        </p>
+                        <div class="flex flex-col text-mat-light-blue text-sm">
+                            <span class="uppercase">{{ $review['author_name'] }}</span>
+                            <span class="">{{ $review['relative_time_description'] }}</span>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="flex flex-row gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
+                @foreach ($reviews as $review)
+                    <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
+                        <div class="flex flex-row text-white">
+                            <x-star></x-star>
+                            <x-star></x-star>
+                            <x-star></x-star>
+                            <x-star></x-star>
+                            <x-star></x-star>
+                        </div>
+                        <p class="text-white text-sm">
+                            “{{ $review['text'] }}”
+                        </p>
+                        <div class="flex flex-col text-mat-light-blue text-sm">
+                            <span class="uppercase">{{ $review['author_name'] }}</span>
+                            <span class="">{{ $review['relative_time_description'] }}</span>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </div>
     <div id="contact-form" class="relative w-full bg-mat-gradient-light py-30">
@@ -447,7 +583,8 @@
                                 Besoin <span class="text-mat-mid-blue">d'aide ?</span>
                             </h1>
                             <p class="text-sm text-mat-dark-blue max-w-md">
-                                Que ce soit pour une réparation urgente ou juste un conseil, on est là. Appelez-nous, passez
+                                Que ce soit pour une réparation urgente ou juste un conseil, on est là. Appelez-nous,
+                                passez
                                 à l'atelier, ou envoyez-nous un message. On s'occupe du reste.
                             </p>
                         </div>
@@ -523,10 +660,15 @@
                                         64000 Pau
                                     </div>
                                 </div>
-                                <img class="w-full aspect-20/9 rounded-lg object-cover object-center"
-                                    src="./images/plan-matformatique.png" alt="">
+                                <a href="{{ $mapsUrl }}" target="_blank"
+                                    class="relative w-full aspect-20/9 rounded-lg overflow-hidden">
+                                    <img class="w-full aspect-20/9 object-cover object-center"
+                                        src="./images/plan-matformatique.png" alt="">
+                                </a>
+
                                 <div class="text-sm text-mat-mid-blue">
-                                    Notre zone primaire d'intervention est de 20 Kms autour de l'atelier et de 50 Kms pour
+                                    Notre zone primaire d'intervention est de 20 Kms autour de l'atelier et de 50 Kms
+                                    pour
                                     la secondaire.
                                 </div>
                             </div>

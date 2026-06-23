@@ -20,14 +20,19 @@
     --color-mat-light-blue: #c0d3ef;
     --color-mat-mid-blue: #486da5;
     --color-mat-dark-blue: #08286c;
-}
 
-@keyframes marquee {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(calc(-100% - 5rem));
+    /* Déclaration de l'animation */
+    --animate-marquee: marquee 30s linear infinite;
+
+    /* Déclaration des keyframes */
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            /* -100% pour défiler tout le bloc, -5rem pour compenser le gap-20 (80px) */
+            transform: translateX(calc(-100% - 5rem));
+        }
     }
 }
 
