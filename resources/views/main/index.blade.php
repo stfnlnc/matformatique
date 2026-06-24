@@ -509,62 +509,64 @@
         <div class="w-full mt-10 flex overflow-hidden select-none gap-8 md:gap-20 mask-linear">
             <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee">
                 @foreach ($reviews as $review)
-                    <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
-                        <div class="flex flex-row text-white">
-                            <x-star></x-star>
-                            <x-star></x-star>
-                            <x-star></x-star>
-                            <x-star></x-star>
-                            <x-star></x-star>
+                    @if ($review['rating'] >= 4)
+                        <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
+                            <div class="flex flex-row text-white">
+                                @for ($i = 0; $i < $review['rating']; $i++)
+                                    <x-star></x-star>
+                                @endfor
+                            </div>
+                            <p class="text-white text-sm">
+                                “{{ $review['text'] === '' ? "L'utilisateur a laissé une note de " . $review['rating'] . ' étoiles' : $review['text'] }}”
+                            </p>
+                            <div class="flex flex-col text-mat-light-blue text-sm">
+                                <span class="uppercase">{{ $review['author_name'] }}</span>
+                                <span class="">{{ $review['relative_time_description'] }}</span>
+                            </div>
                         </div>
-                        <p class="text-white text-sm">
-                            “{{ $review['text'] }}”
-                        </p>
-                        <div class="flex flex-col text-mat-light-blue text-sm">
-                            <span class="uppercase">{{ $review['author_name'] }}</span>
-                            <span class="">{{ $review['relative_time_description'] }}</span>
-                        </div>
-                    </div>
+                    @endif
                 @endforeach
             </div>
             <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
                 @foreach ($reviews as $review)
-                    <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
-                        <div class="flex flex-row text-white">
-                            <x-star></x-star>
-                            <x-star></x-star>
-                            <x-star></x-star>
-                            <x-star></x-star>
-                            <x-star></x-star>
+                    @if ($review['rating'] >= 4)
+                        <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
+                            <div class="flex flex-row text-white">
+                                @for ($i = 0; $i < $review['rating']; $i++)
+                                    <x-star></x-star>
+                                @endfor
+                            </div>
+                            <p class="text-white text-sm">
+                                “{{ $review['text'] === '' ? "L'utilisateur a laissé une note de " . $review['rating'] . ' étoiles' : $review['text'] }}”
+
+                            </p>
+                            <div class="flex flex-col text-mat-light-blue text-sm">
+                                <span class="uppercase">{{ $review['author_name'] }}</span>
+                                <span class="">{{ $review['relative_time_description'] }}</span>
+                            </div>
                         </div>
-                        <p class="text-white text-sm">
-                            “{{ $review['text'] }}”
-                        </p>
-                        <div class="flex flex-col text-mat-light-blue text-sm">
-                            <span class="uppercase">{{ $review['author_name'] }}</span>
-                            <span class="">{{ $review['relative_time_description'] }}</span>
-                        </div>
-                    </div>
+                    @endif
                 @endforeach
             </div>
             <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
                 @foreach ($reviews as $review)
-                    <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
-                        <div class="flex flex-row text-white">
-                            <x-star></x-star>
-                            <x-star></x-star>
-                            <x-star></x-star>
-                            <x-star></x-star>
-                            <x-star></x-star>
+                    @if ($review['rating'] >= 4)
+                        <div class="w-70 overflow-hidden flex flex-col items-start justify-start px-4 py-1 gap-3">
+                            <div class="flex flex-row text-white">
+                                @for ($i = 0; $i < $review['rating']; $i++)
+                                    <x-star></x-star>
+                                @endfor
+                            </div>
+                            <p class="text-white text-sm">
+                                “{{ $review['text'] === '' ? "L'utilisateur a laissé une note de " . $review['rating'] . ' étoiles' : $review['text'] }}”
+
+                            </p>
+                            <div class="flex flex-col text-mat-light-blue text-sm">
+                                <span class="uppercase">{{ $review['author_name'] }}</span>
+                                <span class="">{{ $review['relative_time_description'] }}</span>
+                            </div>
                         </div>
-                        <p class="text-white text-sm">
-                            “{{ $review['text'] }}”
-                        </p>
-                        <div class="flex flex-col text-mat-light-blue text-sm">
-                            <span class="uppercase">{{ $review['author_name'] }}</span>
-                            <span class="">{{ $review['relative_time_description'] }}</span>
-                        </div>
-                    </div>
+                    @endif
                 @endforeach
             </div>
         </div>

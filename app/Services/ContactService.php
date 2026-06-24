@@ -10,6 +10,6 @@ class ContactService
 {
     public function handleContactSubmission(Contact $contact): void
     {
-        Mail::to('admin@votre-site.com')->send(new ContactMailable($contact));
+        Mail::to('contact@matformatique.com')->send(new ContactMailable($contact));
     }
 }
