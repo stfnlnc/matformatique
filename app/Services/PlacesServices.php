@@ -26,7 +26,7 @@ class PlacesServices
     {
         $dataPlaces = $this->getPlacesData();
 
-        return $dataPlaces['user_ratings_total'] ?? "";
+        return $dataPlaces['user_ratings_total'] ?? 0;
     }
 
     public function getRating(): float
