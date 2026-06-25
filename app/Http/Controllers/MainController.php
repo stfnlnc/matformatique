@@ -22,4 +22,19 @@ class MainController extends Controller
             'openingHours' => $this->placesService->getOpeningHours()
         ]);
     }
+
+    public function services()
+    {
+        return view("main.services");
+    }
+
+    public function legalNotice()
+    {
+        return view("main.legal");
+    }
+
+    public function privacyPolicy()
+    {
+        return view("main.privacy");
+    }
 }

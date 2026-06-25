@@ -1,8 +1,8 @@
 @extends('base')
 
 @section('content')
-    <div class="w-full relative bg-linear-to-r from-mat-gradient-light to-mat-gradient-dark py-30">
-        <div class="container px-4 mx-auto grid grid-cols-1 lg:grid-cols-2 w-full h-full">
+    <div class="w-full relative bg-linear-to-r from-mat-gradient-light to-mat-gradient-dark">
+        <div class="relative container px-4 mx-auto grid grid-cols-1 lg:grid-cols-2 w-full h-full py-30">
             <div class="relative w-full h-full flex flex-col items-start justify-center gap-5">
                 <h1 class="text-4xl md:text-5xl text-mat-dark-blue max-w-3xl">
                     Bienvenue chez M@tformatique, <br>
@@ -126,7 +126,7 @@
                         Possibilité de prestation à domicile sous couvert du service à la personne par notre seconde
                         structure Matformatique Service
                     </p>
-                    <x-button-light :href="route('main.home')">En savoir plus</x-button-light>
+                    <x-button-light :href="route('main.services')">En savoir plus</x-button-light>
                 </div>
             </div>
         </div>
@@ -435,70 +435,78 @@
                 <div
                     class="p-7.5 rounded-lg bg-white w-full max-w-96 aspect-3/4 flex flex-col items-start justify-start gap-5">
                     <div class="flex flex-col">
-                        <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
-                            src="./images/team.jpg" alt="">
+                        <div
+                            class="text-4xl text-mat-dark-blue flex flex-row items-center justify-center h-26 aspect-square rounded-lg object-center object-cover w-fit bg-mat-light-blue">
+                            MP
+                        </div>
+                        {{-- <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
+                            src="./images/team.jpg" alt=""> --}}
                         <h2 class="text-2xl text-mat-dark-blue uppercase mt-5">
                             Mathieu Pellet
                         </h2>
                         <p class="text-sm text-mat-dark-blue">
-                            Fondateur
+                            Gérant & Technicien informatique
                         </p>
                     </div>
                     <p class="text-sm text-mat-dark-blue mt-auto">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                        urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-                        vitae
-                        mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna
-                        interdum eu. Curabitur pellentesque nibh.
+                        Passionné d'informatique, j'ai une double mission : accompagner les particuliers au quotidien et
+                        structurer les infrastructures des professionnels. Qu'il s'agisse de dépanner votre ordinateur
+                        personnel ou de concevoir un réseau d'entreprise complet avec configuration de serveurs NAS
+                        sécurisés, je mets la même rigueur à vous garantir des solutions fiables, performantes et adaptées à
+                        vos besoins.
                     </p>
                 </div>
                 <div
                     class="p-7.5 rounded-lg bg-white w-full max-w-96 aspect-3/4 flex flex-col items-start justify-start gap-5">
                     <div class="flex flex-col">
-                        <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
-                            src="./images/team.jpg" alt="">
+                        <div
+                            class="text-4xl text-mat-dark-blue flex flex-row items-center justify-center h-26 aspect-square rounded-lg object-center object-cover w-fit bg-mat-light-blue">
+                            JF
+                        </div>
+                        {{-- <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
+                            src="./images/team.jpg" alt=""> --}}
                         <h2 class="text-2xl text-mat-dark-blue uppercase mt-5">
                             Joel Ferreira
                         </h2>
                         <p class="text-sm text-mat-dark-blue">
-                            Fondateur
+                            Technicien informatique
                         </p>
                     </div>
                     <p class="text-sm text-mat-dark-blue mt-auto">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                        urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-                        vitae
-                        mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna
-                        interdum eu. Curabitur pellentesque nibh.
+                        Spécialiste de l'écosystème Apple et de la restauration système, j'interviens sur les pannes
+                        logicielles et matérielles les plus complexes. Qu'il s'agisse de redonner vie à votre Mac, de
+                        prendre en charge vos réparations ou de récupérer vos données perdues sur des supports endommagés,
+                        je mets mon expertise au service de vos équipements et de vos fichiers précieux.
                     </p>
                 </div>
                 <div
                     class="p-7.5 rounded-lg bg-white w-full max-w-96 aspect-3/4 flex flex-col items-start justify-start gap-5">
                     <div class="flex flex-col">
-                        <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
-                            src="./images/team.jpg" alt="">
+                        <div
+                            class="text-4xl text-mat-dark-blue flex flex-row items-center justify-center h-26 aspect-square rounded-lg object-center object-cover w-fit bg-mat-light-blue">
+                            SL
+                        </div>
+                        {{-- <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
+                            src="./images/team.jpg" alt=""> --}}
                         <h2 class="text-2xl text-mat-dark-blue uppercase mt-5">
                             Stéfan Lancelot
                         </h2>
                         <p class="text-sm text-mat-dark-blue">
-                            Fondateur
+                            Technicien informatique
                         </p>
                     </div>
                     <p class="text-sm text-mat-dark-blue mt-auto">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                        urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-                        vitae
-                        mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna
-                        interdum eu. Curabitur pellentesque nibh.
+                        Spécialisé dans les services web et la gestion de messageries, j'assure la configuration de vos
+                        espaces mails et de vos hébergements au quotidien. Je prends également en charge l'installation, la
+                        maintenance et la sécurisation de vos environnements Linux, qu'il s'agisse de postes de travail ou
+                        de serveurs. Mon objectif est de vous garantir des solutions stables, libres et parfaitement
+                        adaptées à vos besoins.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="w-full bg-mat-dark-blue py-30 overflow-hidden">
+    <div id="vos-avis" class="w-full bg-mat-dark-blue py-30 overflow-hidden">
         <div class="container px-4 mx-auto flex flex-row items-center justify-between gap-5">
             <div class="w-1/2 flex flex-col gap-5">
                 <p class="text-sm text-mat-light-blue uppercase">

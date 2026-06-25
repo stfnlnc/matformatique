@@ -5,9 +5,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
     <title>{{ config('app.name', 'Matformatique') }}</title>
     <link rel="shortcut icon" href="./images/logo-bot.ico" type="image/x-icon">
+
+    <meta name="description"
+        content="Matformatique : Assistance informatique à domicile et en entreprise. Réparation Mac (Apple) et PC (Windows), réseaux, serveurs NAS." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="author" content="Matformatique" />
+    <link rel="canonical" href="{{ url()->current() }}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:title" content="Matformatique | Assistance & Réparation Informatique" />
+    <meta property="og:description"
+        content="Matformatique : Assistance informatique à domicile et en entreprise. Réparation Mac (Apple) et PC (Windows), réseaux, serveurs NAS." />
+    <meta property="og:image" content="./images/bot-2.png" />
+    <meta property="og:site_name" content="Matformatique" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{ url()->current() }}" />
+    <meta name="twitter:title" content="Matformatique | Assistance & Réparation Informatique" />
+    <meta name="twitter:description"
+        content="Matformatique : Assistance informatique à domicile et en entreprise. Réparation Mac (Apple) et PC (Windows), réseaux, serveurs NAS." />
+    <meta name="twitter:image" content="./images/bot-2.png" />
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -76,11 +97,11 @@
                 </div>
             </div>
             <div class="w-full border-t border-mat-mid-blue flex flex-col lg:flex-row lg:gap-10 gap-2 pt-2.5">
-                <p class="text-sm text-mat-mid-blue">© 2026 Matformatique. Tous droits réservés.</p>
+                <p class="text-sm text-mat-mid-blue">© {{ date('Y') }} Matformatique. Tous droits réservés.</p>
                 <a class="text-sm text-mat-mid-blue hover:text-mat-light-blue transition-colors duration-300"
-                    href="">Mentions légales.</a>
+                    href="{{ route('main.legal') }}">Mentions légales.</a>
                 <a class="text-sm text-mat-mid-blue hover:text-mat-light-blue transition-colors duration-300"
-                    href="">Politique de confidentialité.</a>
+                    href="{{ route('main.privacy') }}">Politique de confidentialité.</a>
             </div>
         </div>
     </footer>
