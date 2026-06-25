@@ -1,8 +1,8 @@
 @extends('base')
 
 @section('content')
-    <div class="w-full lg:h-lvh relative min-h-200 bg-linear-to-r from-mat-gradient-light to-mat-gradient-dark py-8">
-        <div class="relative container px-4 mx-auto grid grid-cols-1 lg:grid-cols-2 w-full h-full lg:py-0 pt-30">
+    <div class="w-full relative bg-linear-to-r from-mat-gradient-light to-mat-gradient-dark py-30">
+        <div class="container px-4 mx-auto grid grid-cols-1 lg:grid-cols-2 w-full h-full">
             <div class="relative w-full h-full flex flex-col items-start justify-center gap-5">
                 <h1 class="text-4xl md:text-5xl text-mat-dark-blue max-w-3xl">
                     Bienvenue chez M@tformatique, <br>
@@ -23,8 +23,8 @@
                 <img class="lg:w-full md:w-2/3 w-full aspect-square object-cover object-center" src="./images/bot-2.png"
                     alt="">
             </div>
-            <p class="px-4 absolute bottom-0 left-0 text-xs md:text-sm text-mat-dark-blue uppercase">
-                <span class="motion-safe:animate-pulse">●</span> OUVERT AUJOURD’HUI DE 8H30 À 18H00
+            <p class="px-4 absolute bottom-8 left-0 text-xs md:text-sm text-mat-dark-blue uppercase">
+                <span class="motion-safe:animate-pulse">●</span> {{ $openingHours }}
             </p>
         </div>
     </div>
@@ -412,7 +412,7 @@
             </div>
         </div>
     </div>
-    <div id="notre-equipe" class="relative w-full bg-mat-gradient-light lg:px-12 py-30">
+    <div id="notre-equipe" class="relative w-full bg-mat-gradient-light py-30">
         <div class="w-full container px-4 mx-auto flex flex-col gap-10">
             <div class="w-full flex flex-col md:flex-row gap-4">
                 <div class="md:w-1/4">

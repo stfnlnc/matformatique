@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <title>{{ config('app.name', 'Matformatique') }}</title>
+    <link rel="shortcut icon" href="./images/logo-bot.ico" type="image/x-icon">
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -18,9 +18,9 @@
     <header class="fixed top-0 left-0 w-full py-5 z-9999 px-2">
         <nav
             class="relative bg-white rounded-lg container mx-auto py-1 px-1 min-h-12 flex flex-row items-center justify-between">
-            <div>
+            <a aria-label="Accueil Matformatique" href="{{ route('main.home') }}">
                 <img class="absolute top-1/2 -translate-y-1/2 left-2 w-14" src="./images/logo-bot.png" alt="">
-            </div>
+            </a>
             <div class="flex flex-row gap-1">
                 <div class="lg:flex hidden flex-row gap-1 px-2">
                     <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg" href="#nos-services">Nos services</a>
