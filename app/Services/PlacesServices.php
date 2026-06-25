@@ -22,36 +22,37 @@ class PlacesServices
         return $years;
     }
 
-    public function getTotalRating()
+    public function getTotalRating(): int
     {
         $dataPlaces = $this->getPlacesData();
-        $totalRating = $dataPlaces['user_ratings_total'];
-        return $totalRating;
+
+        return $dataPlaces['user_ratings_total'] ?? "";
     }
 
-    public function getRating()
+    public function getRating(): float
     {
         $dataPlaces = $this->getPlacesData();
-        $rating = $dataPlaces['rating'];
-        return $rating;
+
+        return $dataPlaces['rating'] ?? 5;
     }
-
-
 
     public function getOpeningHours(): string
     {
         $todayDate = now()->format('Y-m-d');
         $dataPlaces = $this->getPlacesData();
+
         $currentHours = $dataPlaces['current_opening_hours']['periods'] ?? [];
 
         foreach ($currentHours as $period) {
-            // L'API Google Places regroupe l'ouverture et la fermeture dans la même période
             if (($period['open']['date'] ?? null) === $todayDate) {
 
-                $openRaw = $period['open']['time'];   // ex: "0830"
-                $closeRaw = $period['close']['time']; // ex: "1800"
+                $openRaw = $period['open']['time'] ?? null;
+                $closeRaw = $period['close']['time'] ?? null;
 
-                // Conversion avec Carbon au format "8H30" et "18H00"
+                if (!$openRaw || !$closeRaw) {
+                    continue;
+                }
+
                 $open = strtoupper(Carbon::createFromFormat('Hi', $openRaw)->format('G\Hi'));
                 $close = strtoupper(Carbon::createFromFormat('Hi', $closeRaw)->format('G\Hi'));
 
@@ -62,48 +63,43 @@ class PlacesServices
         return "FERMÉ AUJOURD’HUI";
     }
 
-    public function getPlacesData()
+    public function getPlacesData(): array
     {
         $path = "uploads/places/api_places.json";
 
         if (!file_exists($path)) {
-            return;
+            return [];
         }
 
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
 
-        return $data['result'];
+        return $data['result'] ?? [];
     }
 
-    public function getReviewsData()
+    public function getReviewsData(): array
     {
         $path = "uploads/places/reviews.json";
 
         if (!file_exists($path)) {
-            return;
+            return [];
         }
 
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
 
-        return $data;
+        return is_array($data) ? $data : [];
     }
 
-    public function getMapsUrl()
+    public function getMapsUrl(): ?string
     {
         $dataPlaces = $this->getPlacesData();
-        $mapsUrl = $dataPlaces['url'];
-
-        return $mapsUrl;
+        return $dataPlaces['url'] ?? null;
     }
 
-    public function getReviews()
+    public function getReviews(): array
     {
-        $dataPlaces = $this->getReviewsData();
-        $reviews = $dataPlaces;
-
-        return $reviews;
+        return $this->getReviewsData();
     }
 
     public function savePlacesApiDetails()
