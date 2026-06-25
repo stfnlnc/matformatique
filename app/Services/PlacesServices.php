@@ -120,7 +120,9 @@ class PlacesServices
         $placeId = config('services.google.place_id');
 
         if (!$apiKey || !$placeId) {
-            Log::error("Google Places : Clé API ou Place ID manquant dans la configuration.");
+            $msg = "Google Places : Clé API ou Place ID manquant dans la configuration.";
+            Log::error($msg);
+            Mail::to('stefan.lancelot@ik.me')->send(new ApiErrorMailable($msg));
             return false;
         }
 
