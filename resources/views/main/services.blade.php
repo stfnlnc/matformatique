@@ -4,7 +4,6 @@
     <div id="services-personne" class="w-full bg-mat-dark-blue py-30">
         <div class="w-full container px-4 mx-auto flex flex-col gap-16">
 
-            <!-- EN-TÊTE PRINCIPAL -->
             <div class="w-full flex md:flex-row flex-col gap-4">
                 <div class="md:w-1/4">
                 </div>
@@ -20,7 +19,6 @@
 
             <hr class="border-white/10">
 
-            <!-- BLOC 1 : AVANTAGES FISCAUX -->
             <div class="w-full flex md:flex-row flex-col gap-4">
                 <div class="md:w-1/4">
                     <p class="text-sm text-mat-light-blue uppercase font-semibold">
@@ -56,7 +54,6 @@
 
             <hr class="border-white/10">
 
-            <!-- BLOC 2 : ASSISTANCE & ACCOMPAGNEMENT -->
             <div class="w-full flex md:flex-row flex-col gap-4">
                 <div class="md:w-1/4">
                     <p class="text-sm text-mat-light-blue uppercase font-semibold">
@@ -83,7 +80,6 @@
 
             <hr class="border-white/10">
 
-            <!-- BLOC 3 : INITIATION & PERFECTIONNEMENT -->
             <div class="w-full flex md:flex-row flex-col gap-4">
                 <div class="md:w-1/4">
                     <p class="text-sm text-mat-light-blue uppercase font-semibold">
@@ -98,7 +94,6 @@
                         Nous vous accompagnons pas à pas pour maîtriser vos outils du quotidien :
                     </p>
 
-                    <!-- Grille/Liste simplifiée des modules de formation -->
                     <div
                         class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 max-w-2xl mt-2 text-white/80 border-l border-white/10 pl-4">
                         <p><strong class="font-medium text-mat-light-blue">Systèmes :</strong> Windows, macOS</p>

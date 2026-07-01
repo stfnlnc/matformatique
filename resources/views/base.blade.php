@@ -40,7 +40,8 @@
         <nav
             class="relative bg-white rounded-lg container mx-auto py-1 px-1 min-h-12 flex flex-row items-center justify-between">
             <a aria-label="Accueil Matformatique" href="{{ route('main.home') }}">
-                <img class="absolute top-1/2 -translate-y-1/2 left-2 w-14" src="./images/logo-bot.png" alt="">
+                <img loading="lazy" class="absolute top-1/2 -translate-y-1/2 left-2 w-14"
+                    src="./images/illustrations/logo-bot.png" alt="">
             </a>
             <div class="flex flex-row gap-1">
                 <div class="lg:flex hidden flex-row gap-1 px-2">
@@ -60,8 +61,8 @@
         <div class="w-full container mx-auto flex flex-col gap-10 px-4">
             <div class="flex flex-col md:flex-row gap-10 items-start justify-between">
                 <div class="w-45 rounded-lg overflow-hidden">
-                    <img class="w-full aspect-square object-cover object-center" src="./images/logo-bot-full.png"
-                        alt="">
+                    <img loading="lazy" class="w-full aspect-square object-cover object-center"
+                        src="./images/illustrations/logo-bot-full.png" alt="">
                 </div>
                 <div>
                     <span class="text-mat-light-blue uppercase text-sm">Horaires</span>

@@ -19,9 +19,9 @@
                 </div>
 
             </div>
-            <div class="w-full h-full flex flex-row items-center justify-center">
-                <img class="lg:w-full md:w-2/3 w-full aspect-square object-cover object-center" src="./images/bot-2.png"
-                    alt="">
+            <div class="w-full h-full flex flex-row items-center justify-center reveal">
+                <img loading="lazy"class="lg:w-full md:w-2/3 w-full aspect-square object-cover object-center"
+                    src="./images/illustrations/bot-2.png" alt="">
             </div>
             <p class="px-4 absolute bottom-8 left-0 text-xs md:text-sm text-mat-dark-blue uppercase">
                 <span class="motion-safe:animate-pulse">●</span> {{ $openingHours }}
@@ -71,15 +71,15 @@
                     </h1>
                     <p class="text-sm text-mat-dark-blue max-w-md">
                         Nos prises en charge ainsi que nos devis sont gratuits.
-                        En cas de résolution lors de l’élaboration de ce dernier, un forfait de 61€ (89€ pour le matériel
-                        Apple) peut être facturé.
+                        En cas de résolution lors de l’élaboration de ce dernier,
+                        un forfait de 61€ (89€ pour le matériel Apple) peut être facturé.
                     </p>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 justify-between">
-                <div class="p-7.5 rounded-lg bg-white flex flex-col items-start justify-start gap-5">
-                    <img class="h-25 max-w-25 object-center object-contain w-fit" src="./images/logo-bot-full.png"
-                        alt="">
+            <div class="reveal-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 justify-between">
+                <div class="reveal-4 p-7.5 rounded-lg bg-white flex flex-col items-start justify-start gap-5">
+                    <img loading="lazy" class="h-25 max-w-25 object-center object-contain w-fit"
+                        src="./images/illustrations/logo-bot-full.png" alt="">
                     <h2 class="text-xl md:text-2xl text-mat-dark-blue uppercase">
                         Pour les professionnels
                     </h2>
@@ -92,8 +92,9 @@
                         • Déplacement sur site
                     </p>
                 </div>
-                <div class="p-7.5 rounded-lg bg-white flex flex-col items-start justify-start gap-5">
-                    <img class="h-25 max-w-25 object-center object-contain w-fit" src="./images/bot-6.png" alt="">
+                <div class="reveal-4 p-7.5 rounded-lg bg-white flex flex-col items-start justify-start gap-5">
+                    <img loading="lazy"class="h-25 max-w-25 object-center object-contain w-fit"
+                        src="./images/illustrations/bot-6.png" alt="">
                     <h2 class="text-xl md:text-2xl text-mat-dark-blue uppercase">
                         Pour les particuliers
                     </h2>
@@ -104,9 +105,9 @@
                         • Vente et installation de matériel
                     </p>
                 </div>
-                <div class="p-7.5 rounded-lg bg-white flex flex-col items-start justify-start gap-5">
-                    <img class="h-25 max-w-25 object-center object-contain w-fit" src="./images/bot-7-rev.png"
-                        alt="">
+                <div class="reveal-4 p-7.5 rounded-lg bg-white flex flex-col items-start justify-start gap-5">
+                    <img loading="lazy" class="h-25 max-w-25 object-center object-contain w-fit"
+                        src="./images/illustrations/bot-7-rev.png" alt="">
                     <h2 class="text-xl md:text-2xl text-mat-dark-blue uppercase">
                         Notre atelier
                     </h2>
@@ -117,8 +118,9 @@
                         • Service d'impression et de photocopie
                     </p>
                 </div>
-                <div class="p-7.5 rounded-lg bg-white flex flex-col items-start justify-start gap-5">
-                    <img class="h-25 max-w-25 object-center object-contain w-fit" src="./images/salp.png" alt="">
+                <div class="reveal-4 p-7.5 rounded-lg bg-white flex flex-col items-start justify-start gap-5">
+                    <img loading="lazy"class="h-25 max-w-25 object-center object-contain w-fit"
+                        src="./images/logos/salp.png" alt="">
                     <h2 class="text-xl md:text-2xl text-mat-dark-blue uppercase">
                         Service à la personne
                     </h2>
@@ -133,12 +135,13 @@
     </div>
     <div class="w-full bg-mat-gradient-light py-10">
         <div class="w-full container px-4 mx-auto">
-            <img class="w-full rounded-lg aspect-13/6 object-cover object-center" src="./images/mat-photo.png"
-                alt="">
+            <img loading="lazy" class="w-full rounded-lg aspect-13/6 object-cover object-center"
+                src="./images/photos/photo-matformatique.jpg" alt="">
         </div>
     </div>
     <div class="w-full relative bg-mat-gradient-light md:py-30 pt-30 pb-70">
-        <img class="w-80 absolute z-0 bottom-0 right-0" src="./images/angle-droit.png" alt="">
+        <img loading="lazy"class="w-80 absolute z-0 bottom-0 right-0" src="./images/illustrations/angle-droit.png"
+            alt="">
         <div class="relative z-1 w-full container px-4 mx-auto flex flex-col gap-10">
             <div class="w-full flex lg:flex-row flex-col gap-20">
                 <div class="md:w-1/2 flex flex-col gap-4">
@@ -155,8 +158,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="lg:w-1/2 flex flex-col gap-2.5">
-                    <div class="px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
+                <div class="lg:w-1/2 flex flex-col gap-2.5 reveal-5-container">
+                    <div
+                        class="reveal-5 px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
                         <div class="toggle-title w-full cursor-pointer flex flex-row items-center justify-start gap-5">
                             <div class="md:text-5xl text-3xl text-mat-light-blue">01</div>
                             <h2 class="text-xl md:text-2xl text-mat-dark-blue uppercase">
@@ -185,7 +189,8 @@
                             matériel en toute sécurité et créons votre dossier client personnalisé.
                         </div>
                     </div>
-                    <div class="px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
+                    <div
+                        class="reveal-5 px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
                         <div class="toggle-title w-full cursor-pointer flex flex-row items-center justify-start gap-5">
                             <div class="md:text-5xl text-3xl text-mat-light-blue">02</div>
                             <h2 class="text-xl md:text-2xl text-mat-dark-blue uppercase">
@@ -215,7 +220,8 @@
                             plus adaptée et la plus durable pour votre ordinateur.
                         </div>
                     </div>
-                    <div class="px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
+                    <div
+                        class="reveal-5 px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
                         <div class="toggle-title w-full cursor-pointer flex flex-row items-center justify-start gap-5">
                             <div class="md:text-5xl text-3xl text-mat-light-blue">03</div>
                             <h2 class="text-xl md:text-2xl text-mat-dark-blue uppercase">
@@ -244,7 +250,8 @@
                             possibles pour que vous puissiez prendre votre décision en toute sérénité.
                         </div>
                     </div>
-                    <div class="px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
+                    <div
+                        class="reveal-5 px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
                         <div class="toggle-title w-full cursor-pointer flex flex-row items-center justify-start gap-5">
                             <div class="md:text-5xl text-3xl text-mat-light-blue">04</div>
                             <h2 class="text-xl md:text-2xl text-mat-dark-blue uppercase">
@@ -274,7 +281,8 @@
                             contrôle pour nous assurer du parfait fonctionnement de votre appareil.
                         </div>
                     </div>
-                    <div class="px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
+                    <div
+                        class="reveal-5 px-2 md:px-7.5 py-2.5 rounded-lg bg-white w-full flex flex-col items-start justify-start">
                         <div class="toggle-title w-full cursor-pointer flex flex-row items-center justify-start gap-5">
                             <div class="md:text-5xl text-3xl text-mat-light-blue">05</div>
                             <h2 class="text-xl md:text-2xl text-mat-dark-blue uppercase">
@@ -319,95 +327,113 @@
             <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee">
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/eset_logo.png" alt="Logo Eset" class="w-full object-contain object-center">
-                </div>
-                <div
-                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/synology_logo.png" alt="Logo Synology"
+                    <img loading="lazy" src="./images/logos/eset_logo.png" alt="Logo Eset"
                         class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/asus_logo.png" alt="Logo Asus" class="w-full object-contain object-center">
+                    <img loading="lazy"src="./images/logos/synology_logo.png" alt="Logo Synology"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/msi_logo.png" alt="Logo Msi" class="w-full object-contain object-center">
+                    <img loading="lazy" src="./images/logos/asus_logo.png" alt="Logo Asus"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/lenovo_logo.png" alt="Logo Lenovo" class="w-full object-contain object-center">
+                    <img loading="lazy"src="./images/logos/msi_logo.png" alt="Logo Msi"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/canon_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                    <img loading="lazy" src="./images/logos/lenovo_logo.png" alt="Logo Lenovo"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/hp_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                    <img loading="lazy"src="./images/logos/canon_logo.png" alt="Logo Canon"
+                        class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img loading="lazy" src="./images/logos/hp_logo.png" alt="Logo Canon"
+                        class="w-full object-contain object-center">
                 </div>
             </div>
 
             <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/eset_logo.png" alt="Logo Eset" class="w-full object-contain object-center">
-                </div>
-                <div
-                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/synology_logo.png" alt="Logo Synology"
+                    <img loading="lazy" src="./images/logos/eset_logo.png" alt="Logo Eset"
                         class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/asus_logo.png" alt="Logo Asus" class="w-full object-contain object-center">
+                    <img loading="lazy"src="./images/logos/synology_logo.png" alt="Logo Synology"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/msi_logo.png" alt="Logo Msi" class="w-full object-contain object-center">
+                    <img loading="lazy" src="./images/logos/asus_logo.png" alt="Logo Asus"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/lenovo_logo.png" alt="Logo Lenovo" class="w-full object-contain object-center">
+                    <img loading="lazy"src="./images/logos/msi_logo.png" alt="Logo Msi"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/canon_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                    <img loading="lazy" src="./images/logos/lenovo_logo.png" alt="Logo Lenovo"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/hp_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                    <img loading="lazy"src="./images/logos/canon_logo.png" alt="Logo Canon"
+                        class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img loading="lazy" src="./images/logos/hp_logo.png" alt="Logo Canon"
+                        class="w-full object-contain object-center">
                 </div>
             </div>
             <div class="flex flex-row gap-8 md:gap-20 flex-nowrap shrink-0 animate-marquee" aria-hidden="true">
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/eset_logo.png" alt="Logo Eset" class="w-full object-contain object-center">
-                </div>
-                <div
-                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/synology_logo.png" alt="Logo Synology"
+                    <img loading="lazy"src="./images/logos/eset_logo.png" alt="Logo Eset"
                         class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/asus_logo.png" alt="Logo Asus" class="w-full object-contain object-center">
+                    <img loading="lazy" src="./images/logos/synology_logo.png" alt="Logo Synology"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/msi_logo.png" alt="Logo Msi" class="w-full object-contain object-center">
+                    <img loading="lazy"src="./images/logos/asus_logo.png" alt="Logo Asus"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/lenovo_logo.png" alt="Logo Lenovo" class="w-full object-contain object-center">
+                    <img loading="lazy" src="./images/logos/msi_logo.png" alt="Logo Msi"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/canon_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                    <img loading="lazy"src="./images/logos/lenovo_logo.png" alt="Logo Lenovo"
+                        class="w-full object-contain object-center">
                 </div>
                 <div
                     class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
-                    <img src="./images/hp_logo.png" alt="Logo Canon" class="w-full object-contain object-center">
+                    <img loading="lazy" src="./images/logos/canon_logo.png" alt="Logo Canon"
+                        class="w-full object-contain object-center">
+                </div>
+                <div
+                    class="w-30 overflow-hidden flex flex-row items-center object-contain object-center bg-white rounded-lg aspect-22/9 px-4 py-1">
+                    <img loading="lazy"src="./images/logos/hp_logo.png" alt="Logo Canon"
+                        class="w-full object-contain object-center">
                 </div>
             </div>
         </div>
@@ -439,7 +465,7 @@
                             class="text-4xl text-mat-dark-blue flex flex-row items-center justify-center h-26 aspect-square rounded-lg object-center object-cover w-fit bg-mat-light-blue">
                             MP
                         </div>
-                        {{-- <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
+                        {{-- <img  loading="lazy" class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
                             src="./images/team.jpg" alt=""> --}}
                         <h2 class="text-2xl text-mat-dark-blue uppercase mt-5">
                             Mathieu Pellet
@@ -463,7 +489,7 @@
                             class="text-4xl text-mat-dark-blue flex flex-row items-center justify-center h-26 aspect-square rounded-lg object-center object-cover w-fit bg-mat-light-blue">
                             JF
                         </div>
-                        {{-- <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
+                        {{-- <img  loading="lazy" class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
                             src="./images/team.jpg" alt=""> --}}
                         <h2 class="text-2xl text-mat-dark-blue uppercase mt-5">
                             Joel Ferreira
@@ -486,7 +512,7 @@
                             class="text-4xl text-mat-dark-blue flex flex-row items-center justify-center h-26 aspect-square rounded-lg object-center object-cover w-fit bg-mat-light-blue">
                             SL
                         </div>
-                        {{-- <img class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
+                        {{-- <img  loading="lazy" class="h-26 aspect-square rounded-lg object-center object-cover w-fit grayscale"
                             src="./images/team.jpg" alt=""> --}}
                         <h2 class="text-2xl text-mat-dark-blue uppercase mt-5">
                             Stéfan Lancelot
@@ -580,7 +606,8 @@
         </div>
     </div>
     <div id="contact-form" class="relative w-full bg-mat-gradient-light py-30">
-        <img class="w-80 absolute z-0 bottom-0 left-0" src="./images/angle-gauche.png" alt="">
+        <img loading="lazy" class="w-80 absolute z-0 bottom-0 left-0" src="./images/illustrations/angle-gauche.png"
+            alt="">
         <div class="relative z-1 w-full container px-4 mx-auto flex flex-col gap-10 md:pb-0 pb-40">
             <div class="w-full container mx-auto flex flex-col gap-10">
                 <div class="w-full flex flex-row">
@@ -605,7 +632,7 @@
                                     @csrf
 
                                     @if (session('success'))
-                                        <div style="color: green; margin-bottom: 15px;">{{ session('success') }}</div>
+                                        <div style="color: green; margin: 15px;">{{ session('success') }}</div>
                                     @endif
 
                                     <div class="flex flex-col gap-2.5">
@@ -672,8 +699,8 @@
                                 </div>
                                 <a href="{{ $mapsUrl }}" target="_blank"
                                     class="relative w-full aspect-20/9 rounded-lg overflow-hidden">
-                                    <img class="w-full aspect-20/9 object-cover object-center"
-                                        src="./images/plan-matformatique.png" alt="">
+                                    <img loading="lazy" class="w-full aspect-20/9 object-cover object-center"
+                                        src="./images/photos/plan-matformatique.png" alt="">
                                 </a>
 
                                 <div class="text-sm text-mat-mid-blue">
