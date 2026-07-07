@@ -40,16 +40,18 @@ html {
     scroll-behavior: smooth;
 }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(50%);
-}
+@media screen and (min-width: 800px) {
+    .reveal {
+        opacity: 0;
+        transform: translateY(50%);
+    }
 
-.reveal-4 {
-    opacity: 0;
-    transform: translateY(50%);
-}
+    .reveal-4 {
+        opacity: 0;
+        transform: translateY(50%);
+    }
 
-.reveal-5 {
-    opacity: 0;
+    .reveal-5 {
+        opacity: 0;
+    }
 }

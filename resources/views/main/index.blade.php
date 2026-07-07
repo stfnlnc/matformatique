@@ -1,7 +1,11 @@
 @extends('base')
 
+@section('head')
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+@endsection
+
 @section('content')
-    <div class="w-full relative bg-linear-to-r from-mat-gradient-light to-mat-gradient-dark">
+    <div class="reveal-container w-full relative bg-linear-to-r from-mat-gradient-light to-mat-gradient-dark">
         <div class="relative container px-4 mx-auto grid grid-cols-1 lg:grid-cols-2 w-full h-full py-30">
             <div class="relative w-full h-full flex flex-col items-start justify-center gap-5">
                 <h1 class="text-4xl md:text-5xl text-mat-dark-blue max-w-3xl">
@@ -17,7 +21,6 @@
                     <x-button-dark href="#contact-form">Nous contacter</x-button-dark>
                     <x-button-light href="tel:0614341709">06.14.34.17.09</x-button-light>
                 </div>
-
             </div>
             <div class="w-full h-full flex flex-row items-center justify-center reveal">
                 <img loading="lazy"class="lg:w-full md:w-2/3 w-full aspect-square object-cover object-center"
@@ -26,6 +29,15 @@
             <p class="px-4 absolute bottom-8 left-0 text-xs md:text-sm text-mat-dark-blue uppercase">
                 <span class="motion-safe:animate-pulse">●</span> {{ $openingHours }}
             </p>
+            <div class="hidden lg:block absolute bottom-8 right-0 p-1 bg-white rounded-lg">
+                <div
+                    class="text-center bg-mat-light-blue px-10 py-2 rounded-xl text-xs md:text-sm text-mat-dark-blue flex flex-col">
+                    <p class="text-xs md:text-sm text-mat-dark-blue">Assistance à distance</p>
+                    <p class="uppercase text-mat-dark-blue text-2xl mb-2">Windows</p>
+                    <x-button-white href="./Matformatique.exe">Télécharger</x-button-white>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="w-full bg-mat-dark-blue px-15 py-10">
@@ -671,6 +683,13 @@
                                         </label>
                                         <textarea id="message" name="message" required class="p-2.5 h-30 bg-white rounded-lg text-sm text-mat-dark-blue">{{ old('message') }}</textarea>
                                         @error('message')
+                                            <span style="color: red;">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="flex flex-col gap-2.5 my-2">
+                                        <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+                                        @error('g-recaptcha-response')
                                             <span style="color: red;">{{ $message }}</span>
                                         @enderror
                                     </div>
