@@ -84,7 +84,7 @@
                     <p class="text-sm text-mat-dark-blue max-w-md">
                         Nos prises en charge ainsi que nos devis sont gratuits.
                         En cas de résolution lors de l’élaboration de ce dernier,
-                        un forfait de 61€ (89€ pour le matériel Apple) peut être facturé.
+                        un forfait de 63€ (91€ pour le matériel Apple) peut être facturé.
                     </p>
                 </div>
             </div>
@@ -114,6 +114,7 @@
                         • Assistance informatique <br>
                         • Dépannage informatique <br>
                         • Accompagnement personnalisé à domicile <br>
+                        • Mise en place de sauvegarde <br>
                         • Vente et installation de matériel
                     </p>
                 </div>
@@ -286,7 +287,7 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            Une fois le devis validé, nos experts interviennent sur votre matériel dans les plus brefs
+                            Une fois le devis validé, nos techniciens interviennent sur votre matériel dans les plus brefs
                             délais. Qu'il s'agisse d'un remplacement de composant, d'une suppression de logiciels
                             malveillants, d'une réinstallation de système ou d'une récupération de données, nous travaillons
                             avec soin et minutie. Avant de clore l'intervention, nous effectuons une batterie de tests de

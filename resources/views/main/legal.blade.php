@@ -77,6 +77,13 @@
                     <p><strong class="font-medium text-mat-mid-blue">Adresse :</strong> 2 rue Kellermann - 59100 Roubaix -
                         France</p>
                     <p><strong class="font-medium text-mat-mid-blue">Site de l'hébergeur :</strong> www.ovhcloud.com</p>
+                    <p class="mb-3"><strong class="font-medium text-mat-mid-blue">_____</strong>
+                    <p><strong class="font-medium text-mat-mid-blue">Nom de domaine :</strong> Ionos</p>
+                    <p><strong class="font-medium text-mat-mid-blue">Raison sociale :</strong> Ionos SARL</p>
+                    <p><strong class="font-medium text-mat-mid-blue">Adresse :</strong> 7 place de la Gare - 57200
+                        Sarreguemines -
+                        France</p>
+                    <p><strong class="font-medium text-mat-mid-blue">Site de l'hébergeur :</strong> www.ionos.fr</p>
                 </div>
             </div>
 
