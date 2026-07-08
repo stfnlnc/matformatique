@@ -9,7 +9,7 @@
 
     <meta name="description"
         content="Matformatique : Assistance informatique à domicile et en entreprise. Réparation Mac (Apple) et PC (Windows), réseaux, serveurs NAS." />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="index, follow" />
     <meta name="author" content="Matformatique" />
     <link rel="canonical" href="{{ url()->current() }}" />
 
