@@ -1,5 +1,7 @@
 @extends('base')
 
+@section('title', 'Assistance à domicile')
+
 @section('content')
     <div id="services-personne" class="w-full bg-mat-dark-blue py-30">
         <div class="w-full container px-4 mx-auto flex flex-col gap-16">

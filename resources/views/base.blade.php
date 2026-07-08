@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>{{ config('app.name', 'Matformatique') }}</title>
-    <link rel="shortcut icon" href="./images/logo-bot.ico" type="image/x-icon">
+    <title>@yield('title', 'Assistance et dépannage informatique') - {{ config('app.name', 'Matformatique') }}</title>
 
     <meta name="description"
         content="Matformatique : Assistance informatique à domicile et en entreprise. Réparation Mac (Apple) et PC (Windows), réseaux, serveurs NAS." />
@@ -19,7 +18,7 @@
     <meta property="og:title" content="Matformatique | Assistance & Réparation Informatique" />
     <meta property="og:description"
         content="Matformatique : Assistance informatique à domicile et en entreprise. Réparation Mac (Apple) et PC (Windows), réseaux, serveurs NAS." />
-    <meta property="og:image" content="./images/bot-2.png" />
+    <meta property="og:image" content="./images/illustrations/bot-2.png" />
     <meta property="og:site_name" content="Matformatique" />
     <meta property="og:locale" content="fr_FR" />
 
@@ -28,7 +27,7 @@
     <meta name="twitter:title" content="Matformatique | Assistance & Réparation Informatique" />
     <meta name="twitter:description"
         content="Matformatique : Assistance informatique à domicile et en entreprise. Réparation Mac (Apple) et PC (Windows), réseaux, serveurs NAS." />
-    <meta name="twitter:image" content="./images/bot-2.png" />
+    <meta name="twitter:image" content="./images/illustrations/bot-2.png" />
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -46,9 +45,12 @@
             </a>
             <div class="flex flex-row gap-1">
                 <div class="lg:flex hidden flex-row gap-1 px-2">
-                    <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg" href="#nos-services">Nos services</a>
-                    <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg" href="#notre-equipe">Notre équipe</a>
-                    <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg" href="#vos-avis">Vos avis</a>
+                    <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg"
+                        href="{{ route('main.home') }}#nos-services">Nos services</a>
+                    <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg"
+                        href="{{ route('main.home') }}#notre-equipe">Notre équipe</a>
+                    <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg"
+                        href="{{ route('main.home') }}#vos-avis">Vos avis</a>
                 </div>
                 <x-button-dark href="#contact-form">Nous contacter</x-button-dark>
                 <x-button-light href="tel:0614341709">06.14.34.17.09</x-button-light>

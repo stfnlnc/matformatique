@@ -1,5 +1,7 @@
 @extends('base')
 
+@section('title', 'Politique de confidentialité')
+
 @section('content')
     <div id="politique-confidentialite" class="w-full bg-mat-gradient-light py-30">
         <div class="w-full container px-4 mx-auto flex flex-col gap-16">
@@ -98,6 +100,27 @@
                             Vos e-mails de contact transitent et sont stockés de manière sécurisée sur nos serveurs de
                             messagerie.</li>
                     </ul>
+                </div>
+            </div>
+            <hr class="border-mat-mid-blue/10">
+
+            <div class="w-full flex md:flex-row flex-col gap-4">
+                <div class="md:w-1/4">
+                    <p class="text-sm text-mat-mid-blue uppercase font-semibold">
+                        ● Cookies
+                    </p>
+                </div>
+                <div class="md:w-3/4 flex flex-col gap-3 text-sm text-mat-dark-blue">
+                    <h2 class="text-2xl font-bold text-mat-dark-blue mb-2">
+                        Enregistrement des <span class="text-mat-mid-blue">cookies</span>
+                    </h2>
+                    <p class="max-w-2xl leading-relaxed text-mat-dark-blue/90">
+                        Nous utilisons des cookies strictement nécessaires au fonctionnement du site : <br>
+                        - matformatique_session : Permet de maintenir votre session active et de sécuriser votre
+                        navigation. (Expire à la fermeture du navigateur). <br>
+                        - XSRF-TOKEN : Utilisé pour protéger le site contre les attaques de type Cross-Site Request Forgery
+                        (CSRF). (Expire à la fermeture du navigateur).
+                    </p>
                 </div>
             </div>
 

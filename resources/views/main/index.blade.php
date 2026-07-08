@@ -1,8 +1,6 @@
 @extends('base')
 
-@section('head')
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-@endsection
+@section('title', 'Assistance et dépannage informatique')
 
 @section('content')
     <div class="reveal-container w-full relative bg-linear-to-r from-mat-gradient-light to-mat-gradient-dark">
@@ -29,12 +27,19 @@
             <p class="px-4 absolute bottom-8 left-0 text-xs md:text-sm text-mat-dark-blue uppercase">
                 <span class="motion-safe:animate-pulse">●</span> {{ $openingHours }}
             </p>
-            <div class="hidden lg:block absolute bottom-8 right-0 p-1 bg-white rounded-lg">
+            <div class="hidden lg:flex absolute bottom-8 right-0 p-1 bg-white rounded-lg flex-col gap-1">
                 <div
                     class="text-center bg-mat-light-blue px-10 py-2 rounded-xl text-xs md:text-sm text-mat-dark-blue flex flex-col">
                     <p class="text-xs md:text-sm text-mat-dark-blue">Assistance à distance</p>
                     <p class="uppercase text-mat-dark-blue text-2xl mb-2">Windows</p>
                     <x-button-white href="./Matformatique.exe">Télécharger</x-button-white>
+                </div>
+                <div
+                    class="text-center bg-mat-dark-blue px-10 py-2 rounded-xl text-xs md:text-sm text-mat-light-blue flex flex-col">
+                    <p class="text-xs md:text-sm text-mat-light-blue">Assistance à distance</p>
+                    <p class="uppercase text-mat-light-blue text-2xl mb-2">macOS</p>
+                    <x-button-white class="hover:shadow-sm hover:shadow-mat-light-blue transition-all duration-300"
+                        href="./Supremo.dmg">Télécharger</x-button-white>
                 </div>
             </div>
 
@@ -196,9 +201,12 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            Nous vous accueillons en atelier ou prenons en charge votre demande par téléphone et formulaire
-                            en ligne. Lors de cette première étape, nous écoutons attentivement vos besoins et les symptômes
-                            de votre machine (lenteurs, panne matérielle, virus, écran cassé...). Nous enregistrons votre
+                            Nous vous accueillons en atelier ou prenons en charge votre demande par téléphone et
+                            formulaire
+                            en ligne. Lors de cette première étape, nous écoutons attentivement vos besoins et les
+                            symptômes
+                            de votre machine (lenteurs, panne matérielle, virus, écran cassé...). Nous enregistrons
+                            votre
                             matériel en toute sécurité et créons votre dossier client personnalisé.
                         </div>
                     </div>
@@ -226,10 +234,15 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            Nos techniciens qualifiés procèdent à une série de tests approfondis sur votre équipement. Nous
-                            analysons les composants matériels (disque dur, mémoire RAM, carte mère...) et l'état du système
-                            d'exploitation afin d'identifier précisément l'origine de la panne ou des dysfonctionnements. Ce
-                            check-up complet nous permet de vous proposer la solution de réparation ou d'optimisation la
+                            Nos techniciens qualifiés procèdent à une série de tests approfondis sur votre
+                            équipement.
+                            Nous
+                            analysons les composants matériels (disque dur, mémoire RAM, carte mère...) et l'état du
+                            système
+                            d'exploitation afin d'identifier précisément l'origine de la panne ou des
+                            dysfonctionnements. Ce
+                            check-up complet nous permet de vous proposer la solution de réparation ou
+                            d'optimisation la
                             plus adaptée et la plus durable pour votre ordinateur.
                         </div>
                     </div>
@@ -257,9 +270,11 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            À la suite du diagnostic, nous vous transmettons un devis clair, détaillé et transparent,
+                            À la suite du diagnostic, nous vous transmettons un devis clair, détaillé et
+                            transparent,
                             comprenant le coût de la main-d'œuvre et des éventuelles pièces de rechange. Aucun frais
-                            supplémentaire n'est engagé sans votre accord. Nous vous expliquons les différentes options
+                            supplémentaire n'est engagé sans votre accord. Nous vous expliquons les différentes
+                            options
                             possibles pour que vous puissiez prendre votre décision en toute sérénité.
                         </div>
                     </div>
@@ -287,10 +302,14 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            Une fois le devis validé, nos techniciens interviennent sur votre matériel dans les plus brefs
+                            Une fois le devis validé, nos techniciens interviennent sur votre matériel dans les plus
+                            brefs
                             délais. Qu'il s'agisse d'un remplacement de composant, d'une suppression de logiciels
-                            malveillants, d'une réinstallation de système ou d'une récupération de données, nous travaillons
-                            avec soin et minutie. Avant de clore l'intervention, nous effectuons une batterie de tests de
+                            malveillants, d'une réinstallation de système ou d'une récupération de données, nous
+                            travaillons
+                            avec soin et minutie. Avant de clore l'intervention, nous effectuons une batterie de
+                            tests
+                            de
                             contrôle pour nous assurer du parfait fonctionnement de votre appareil.
                         </div>
                     </div>
@@ -318,9 +337,13 @@
                         <div
                             class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
-                            Votre ordinateur est prêt ! Nous vous contactons pour convenir de sa restitution. Lors de la
-                            remise, nous prenons le temps de vous montrer le résultat, de vous expliquer les réparations
-                            effectuées et de vous donner des conseils personnalisés pour prolonger la durée de vie de votre
+                            Votre ordinateur est prêt ! Nous vous contactons pour convenir de sa restitution. Lors
+                            de la
+                            remise, nous prenons le temps de vous montrer le résultat, de vous expliquer les
+                            réparations
+                            effectuées et de vous donner des conseils personnalisés pour prolonger la durée de vie
+                            de
+                            votre
                             machine. Vous repartez avec un matériel fonctionnel, garanti et prêt à l'emploi.
                         </div>
                     </div>
@@ -464,7 +487,8 @@
                         Venez à la rencontre de <span class="text-mat-mid-blue">notre équipe</span>
                     </h1>
                     <p class="text-sm text-mat-dark-blue max-w-md">
-                        Derrière chaque réparation, il y a une personne à l’écoute et passionnée. Nous prenons soin de
+                        Derrière chaque réparation, il y a une personne à l’écoute et passionnée. Nous prenons soin
+                        de
                         votre
                         matériel avec attention, en privilégiant la confiance et le contact humain.
                     </p>
@@ -488,10 +512,13 @@
                         </p>
                     </div>
                     <p class="text-sm text-mat-dark-blue mt-auto">
-                        Passionné d'informatique, j'ai une double mission : accompagner les particuliers au quotidien et
-                        structurer les infrastructures des professionnels. Qu'il s'agisse de dépanner votre ordinateur
+                        Passionné d'informatique, j'ai une double mission : accompagner les particuliers au
+                        quotidien et
+                        structurer les infrastructures des professionnels. Qu'il s'agisse de dépanner votre
+                        ordinateur
                         personnel ou de concevoir un réseau d'entreprise complet avec configuration de serveurs NAS
-                        sécurisés, je mets la même rigueur à vous garantir des solutions fiables, performantes et adaptées à
+                        sécurisés, je mets la même rigueur à vous garantir des solutions fiables, performantes et
+                        adaptées à
                         vos besoins.
                     </p>
                 </div>
@@ -513,8 +540,10 @@
                     </div>
                     <p class="text-sm text-mat-dark-blue mt-auto">
                         Spécialiste de l'écosystème Apple et de la restauration système, j'interviens sur les pannes
-                        logicielles et matérielles les plus complexes. Qu'il s'agisse de redonner vie à votre Mac, de
-                        prendre en charge vos réparations ou de récupérer vos données perdues sur des supports endommagés,
+                        logicielles et matérielles les plus complexes. Qu'il s'agisse de redonner vie à votre Mac,
+                        de
+                        prendre en charge vos réparations ou de récupérer vos données perdues sur des supports
+                        endommagés,
                         je mets mon expertise au service de vos équipements et de vos fichiers précieux.
                     </p>
                 </div>
@@ -535,9 +564,14 @@
                         </p>
                     </div>
                     <p class="text-sm text-mat-dark-blue mt-auto">
-                        Spécialisé dans les services web et la gestion de messageries, j'assure la configuration de vos
-                        espaces mails et de vos hébergements au quotidien. Je prends également en charge l'installation, la
-                        maintenance et la sécurisation de vos environnements Linux, qu'il s'agisse de postes de travail ou
+                        Spécialisé dans les services web et la gestion de messageries, j'assure la configuration de
+                        vos
+                        espaces mails et de vos hébergements au quotidien. Je prends également en charge
+                        l'installation,
+                        la
+                        maintenance et la sécurisation de vos environnements Linux, qu'il s'agisse de postes de
+                        travail
+                        ou
                         de serveurs. Mon objectif est de vous garantir des solutions stables, libres et parfaitement
                         adaptées à vos besoins.
                     </p>
@@ -633,7 +667,8 @@
                                 Besoin <span class="text-mat-mid-blue">d'aide ?</span>
                             </h1>
                             <p class="text-sm text-mat-dark-blue max-w-md">
-                                Que ce soit pour une réparation urgente ou juste un conseil, on est là. Appelez-nous,
+                                Que ce soit pour une réparation urgente ou juste un conseil, on est là.
+                                Appelez-nous,
                                 passez
                                 à l'atelier, ou envoyez-nous un message. On s'occupe du reste.
                             </p>
@@ -643,6 +678,7 @@
                                 <form class="w-full flex flex-col gap-2.5"
                                     action="{{ route('contact.submit') }}#contact-form" method="POST">
                                     @csrf
+                                    @honeypot
 
                                     @if (session('success'))
                                         <div style="color: green; margin: 15px;">{{ session('success') }}</div>
@@ -688,13 +724,6 @@
                                         @enderror
                                     </div>
 
-                                    <div class="flex flex-col gap-2.5 my-2">
-                                        <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
-                                        @error('g-recaptcha-response')
-                                            <span style="color: red;">{{ $message }}</span>
-                                        @enderror
-                                    </div>
-
                                     <button
                                         class="cursor-pointer hover:bg-mat-mid-blue transition-colors duration-300 bg-mat-dark-blue text-white text-sm px-2.5 py-2 rounded-lg"
                                         type="submit">Envoyer</button>
@@ -703,7 +732,8 @@
                             <div class="flex flex-col gap-5 w-full">
                                 <div>
                                     <span class="text-sm text-mat-mid-blue uppercase">Téléphone</span> <br>
-                                    <a href="tel:0614341709" class="text-mat-dark-blue text-2xl">06 14 34 17 09</a>
+                                    <a href="tel:0614341709" class="text-mat-dark-blue text-2xl">06 14 34 17
+                                        09</a>
                                 </div>
                                 <div>
                                     <span class="text-sm text-mat-mid-blue uppercase">Email</span> <br>
@@ -724,7 +754,8 @@
                                 </a>
 
                                 <div class="text-sm text-mat-mid-blue">
-                                    Notre zone primaire d'intervention est de 20 Kms autour de l'atelier et de 50 Kms
+                                    Notre zone primaire d'intervention est de 20 Kms autour de l'atelier et de 50
+                                    Kms
                                     pour
                                     la secondaire.
                                 </div>

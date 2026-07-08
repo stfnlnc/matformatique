@@ -1,5 +1,7 @@
 @extends('base')
 
+@section('title', 'Mentions légales')
+
 @section('content')
     <div id="mentions-legales" class="w-full bg-mat-gradient-light py-30">
         <div class="w-full container px-4 mx-auto flex flex-col gap-16">
@@ -107,8 +109,19 @@
                     </p>
 
                     <div class="mt-2 flex flex-col gap-2 border-l-2 border-mat-mid-blue/30 pl-4 py-1">
-                        <p><strong class="font-medium text-mat-mid-blue">Crédits photographiques :</strong> Onze Digital</p>
+                        <p><strong class="font-medium text-mat-mid-blue">Crédits photographiques :</strong>
+                            <a target="_blank" class="underline underline-offset-4" href="https://onzedigital.fr/">Onze
+                                Digital</a>
+                        </p>
                         <p><strong class="font-medium text-mat-mid-blue">Crédits illustrations :</strong> Sylvain Brosset
+                        </p>
+                        <p><strong class="font-medium text-mat-mid-blue">Crédits illustrations :</strong>
+                            <a target="_blank" class="underline underline-offset-4"
+                                href="https://couturedelphine.wixsite.com/ddou">Ddou</a>
+                        </p>
+                        <p><strong class="font-medium text-mat-mid-blue">Développement web :</strong>
+                            <a target="_blank" class="underline underline-offset-4" href="https://stefanlancelot.com">Stéfan
+                                Lancelot</a>
                         </p>
                     </div>
 

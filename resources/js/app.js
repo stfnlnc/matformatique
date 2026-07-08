@@ -60,3 +60,12 @@ mm.add("(min-width: 800px)", () => {
         });
     });
 });
+
+const marquees = document.querySelectorAll("animate-marquee");
+marquees.forEach((marquee) => {
+    marquee.addEventListener("mouseover", () => {
+        marquees.forEach((marquee) => {
+            marquee.style.anim;
+        });
+    });
+});
