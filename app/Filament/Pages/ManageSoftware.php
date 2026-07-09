@@ -41,19 +41,19 @@ class ManageSoftware extends Page
                 Form::make([
                     FileUpload::make('file_windows')
                         ->label('Windows')
-                        ->disk('public_uploads')
+                        ->disk('public_folder')
                         ->hint('Télécharger le fichier .exe')
                         ->hintIcon('heroicon-o-paper-clip')
                         ->preserveFilenames(),
                     FileUpload::make('file_macos')
                         ->label('macOS')
-                        ->disk('public_uploads')
+                        ->disk('public_folder')
                         ->hintIcon('heroicon-o-paper-clip')
                         ->hint('Télécharger le fichier .dmg')
                         ->preserveFilenames(),
                     FileUpload::make('file_macos_instructions')
                         ->label('Instructions macOS')
-                        ->disk('public_uploads')
+                        ->disk('public_folder')
                         ->hintIcon('heroicon-o-paper-clip')
                         ->hint('Télécharger le fichier d\'instructions')
                         ->preserveFilenames(),

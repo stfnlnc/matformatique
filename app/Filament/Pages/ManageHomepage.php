@@ -4,15 +4,16 @@ namespace App\Filament\Pages;
 
 use App\Filament\Forms\Components\RichEditor\RichContentCustomBlocks\HeroBlock;
 use App\Models\Homepage;
+use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\RichEditor\TextColor;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Form;
 use Filament\Schemas\Schema;
-use Filament\Forms\Components\RichEditor\TextColor;
 
 /**
  * @property-read Schema $form
@@ -20,6 +21,14 @@ use Filament\Forms\Components\RichEditor\TextColor;
 class ManageHomepage extends Page
 {
     protected string $view = 'filament.pages.manage-homepage';
+
+    protected static ?string $modelLabel = 'accueil';
+
+    protected static ?string $title = "Accueil";
+
+    protected static ?string $navigationLabel = 'Accueil';
+
+    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-tv';
 
     /**
      * @var array<string, mixed> | null
