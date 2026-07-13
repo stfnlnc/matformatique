@@ -87,10 +87,9 @@
                     <span class="text-mat-light-blue uppercase text-sm">Contact</span>
                     <br>
                     <br>
-                    <a href="mailto:contact@matformatique.com" class="text-white text-sm">
+                    <div class="text-white text-sm">
                         contact@matformatique.com
-                    </a>
-                    <br>
+                    </div>
                     <a href="tel:0614341709" class="text-white text-sm">
                         06 14 34 17 09
                     </a>

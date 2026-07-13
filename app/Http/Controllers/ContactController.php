@@ -11,7 +11,7 @@ class ContactController extends Controller
 {
     public function submit(ContactRequest $request, ContactService $contactService): RedirectResponse
     {
-        $cleanData = $request->validated();
+        $cleanData = $request->safe()->except(['g-recaptcha-response']);
 
         $contact = new Contact($cleanData);
         // $contact->save();

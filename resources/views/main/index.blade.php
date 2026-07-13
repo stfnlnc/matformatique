@@ -2,6 +2,10 @@
 
 @section('title', 'Assistance et dépannage informatique')
 
+@section('head')
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+@endsection
+
 @section('content')
     <div class="reveal-container w-full relative bg-linear-to-r from-mat-gradient-light to-mat-gradient-dark">
         <div class="relative container px-4 mx-auto grid grid-cols-1 lg:grid-cols-2 w-full h-full py-30">
@@ -724,6 +728,13 @@
                                         @enderror
                                     </div>
 
+                                    <div class="flex flex-col gap-2.5 my-2">
+                                        <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+                                        @error('g-recaptcha-response')
+                                            <span style="color: red;">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+
                                     <button
                                         class="cursor-pointer hover:bg-mat-mid-blue transition-colors duration-300 bg-mat-dark-blue text-white text-sm px-2.5 py-2 rounded-lg"
                                         type="submit">Envoyer</button>
@@ -737,8 +748,8 @@
                                 </div>
                                 <div>
                                     <span class="text-sm text-mat-mid-blue uppercase">Email</span> <br>
-                                    <a href="mailto:contact@matformatique.com"
-                                        class="text-mat-dark-blue text-2xl">contact@matformatique.com</a>
+                                    <div
+                                        class="text-mat-dark-blue text-2xl">contact@matformatique.com</div>
                                 </div>
                                 <div>
                                     <span class="text-sm text-mat-mid-blue uppercase">Adresse</span> <br>
