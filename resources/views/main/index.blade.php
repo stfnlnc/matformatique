@@ -682,7 +682,6 @@
                                 <form class="w-full flex flex-col gap-2.5"
                                     action="{{ route('contact.submit') }}#contact-form" method="POST">
                                     @csrf
-                                    @honeypot
 
                                     @if (session('success'))
                                         <div style="color: green; margin: 15px;">{{ session('success') }}</div>
