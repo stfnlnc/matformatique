@@ -86,8 +86,8 @@
                         ● Nos services
                     </p>
                 </div>
-                <div class="md:w-3/4 flex flex-col gap-5 w-max max-w-3xl">
-                    <h1 class="text-4xl md:text-5xl text-mat-dark-blue w-max max-w-full">
+                <div class="md:w-3/4 flex flex-col gap-5 max-w-3xl">
+                    <h1 class="text-4xl md:text-5xl text-mat-dark-blue max-w-full">
                         Découvrez tous <span class="text-mat-mid-blue">nos services</span>
                     </h1>
                     <p class="text-sm text-mat-dark-blue max-w-prose">
@@ -170,8 +170,8 @@
                     <p class="text-sm text-mat-mid-blue uppercase">
                         ● Nos étapes
                     </p>
-                    <div class="md:w-3/4 flex flex-col gap-5 w-max max-w-3xl">
-                        <h1 class="text-4xl md:text-5xl text-mat-dark-blue w-max max-w-full">
+                    <div class="md:w-3/4 flex flex-col gap-5 max-w-3xl">
+                        <h1 class="text-4xl md:text-5xl text-mat-dark-blue max-w-full">
                             Comment <br> <span class="text-mat-mid-blue">ça marche ?</span>
                         </h1>
                         <p class="text-sm text-mat-dark-blue">
