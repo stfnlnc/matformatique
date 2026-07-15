@@ -75,7 +75,7 @@
                         <li>Installation et mise à jour de vos logiciels et matériels.</li>
                         <li>Installation de votre Box (<span class="text-white">Livebox, Freebox, Révolution, etc.</span>).
                         </li>
-                        <li>Maintenance complète de votre système informatique.</li>
+                        <li>Assistance sur votre système informatique.</li>
                     </ul>
                 </div>
             </div>

@@ -14,7 +14,7 @@
                     Bienvenue chez M@tformatique, <br>
                     à votre service <span class="text-mat-mid-blue">depuis 2010</span>
                 </h1>
-                <p class="text-sm text-mat-dark-blue max-w-md">
+                <p class="text-sm text-mat-dark-blue max-w-3xl">
                     Notre but ? Vous rendre l'informatique plus facile
                     par le biais de conseils, de dépannages, de ventes
                     et d'accompagnement dans vos projets.
@@ -86,11 +86,11 @@
                         ● Nos services
                     </p>
                 </div>
-                <div class="md:w-3/4 flex flex-col gap-5">
-                    <h1 class="text-4xl md:text-5xl text-mat-dark-blue max-w-3xl">
+                <div class="md:w-3/4 flex flex-col gap-5 w-max max-w-3xl">
+                    <h1 class="text-4xl md:text-5xl text-mat-dark-blue w-max max-w-full">
                         Découvrez tous <span class="text-mat-mid-blue">nos services</span>
                     </h1>
-                    <p class="text-sm text-mat-dark-blue max-w-md">
+                    <p class="text-sm text-mat-dark-blue max-w-prose">
                         Nos prises en charge ainsi que nos devis sont gratuits.
                         En cas de résolution lors de l’élaboration de ce dernier,
                         un forfait de 63€ (91€ pour le matériel Apple) peut être facturé.
@@ -170,11 +170,11 @@
                     <p class="text-sm text-mat-mid-blue uppercase">
                         ● Nos étapes
                     </p>
-                    <div class="md:w-3/4 flex flex-col gap-5">
-                        <h1 class="text-4xl md:text-5xl text-mat-dark-blue max-w-3xl">
+                    <div class="md:w-3/4 flex flex-col gap-5 w-max max-w-3xl">
+                        <h1 class="text-4xl md:text-5xl text-mat-dark-blue w-max max-w-full">
                             Comment <br> <span class="text-mat-mid-blue">ça marche ?</span>
                         </h1>
-                        <p class="text-sm text-mat-dark-blue max-w-md">
+                        <p class="text-sm text-mat-dark-blue">
                             Notre guide étape par étape pour la réparation
                             de votre matériel informatique.
                         </p>
@@ -203,7 +203,7 @@
                             </div>
                         </div>
                         <div
-                            class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
+                            class="text-sm text-mat-dark-blue toggle-paragraph text-justify h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
                             Nous vous accueillons en atelier ou prenons en charge votre demande par téléphone et
                             formulaire
@@ -236,7 +236,7 @@
                             </div>
                         </div>
                         <div
-                            class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
+                            class="text-sm text-mat-dark-blue toggle-paragraph text-justify h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
                             Nos techniciens qualifiés procèdent à une série de tests approfondis sur votre
                             équipement.
@@ -272,7 +272,7 @@
                             </div>
                         </div>
                         <div
-                            class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
+                            class="text-sm text-mat-dark-blue toggle-paragraph text-justify h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
                             À la suite du diagnostic, nous vous transmettons un devis clair, détaillé et
                             transparent,
@@ -304,7 +304,7 @@
                             </div>
                         </div>
                         <div
-                            class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
+                            class="text-sm text-mat-dark-blue toggle-paragraph text-justify h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
                             Une fois le devis validé, nos techniciens interviennent sur votre matériel dans les plus
                             brefs
@@ -339,7 +339,7 @@
                             </div>
                         </div>
                         <div
-                            class="text-sm text-mat-dark-blue toggle-paragraph h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
+                            class="text-sm text-mat-dark-blue toggle-paragraph text-justify h-full max-h-0 overflow-hidden transition-[max-height] duration-700">
                             <div class="h-5"></div>
                             Votre ordinateur est prêt ! Nous vous contactons pour convenir de sa restitution. Lors
                             de la
@@ -490,11 +490,9 @@
                     <h1 class="text-4xl md:text-5xl text-mat-dark-blue max-w-3xl">
                         Venez à la rencontre de <span class="text-mat-mid-blue">notre équipe</span>
                     </h1>
-                    <p class="text-sm text-mat-dark-blue max-w-md">
-                        Derrière chaque réparation, il y a une personne à l’écoute et passionnée. Nous prenons soin
-                        de
-                        votre
-                        matériel avec attention, en privilégiant la confiance et le contact humain.
+                    <p class="text-sm text-mat-dark-blue max-w-3xl">
+                        Derrière chaque réparation, il y a une personne à l’écoute et passionnée. Nous traitons votre
+                        matériel avec la plus grande attention, en privilégiant la confiance et le contact humain.
                     </p>
                 </div>
             </div>
@@ -670,9 +668,9 @@
                             <h1 class="text-4xl md:text-5xl text-mat-dark-blue max-w-3xl">
                                 Besoin <span class="text-mat-mid-blue">d'aide ?</span>
                             </h1>
-                            <p class="text-sm text-mat-dark-blue max-w-md">
+                            <p class="text-sm text-mat-dark-blue max-w-3xl">
                                 Que ce soit pour une réparation urgente ou juste un conseil, on est là.
-                                Appelez-nous,
+                                <br>Appelez-nous,
                                 passez
                                 à l'atelier, ou envoyez-nous un message. On s'occupe du reste.
                             </p>
@@ -747,8 +745,7 @@
                                 </div>
                                 <div>
                                     <span class="text-sm text-mat-mid-blue uppercase">Email</span> <br>
-                                    <div
-                                        class="text-mat-dark-blue text-2xl">contact@matformatique.com</div>
+                                    <div class="text-mat-dark-blue text-2xl">contact@matformatique.com</div>
                                 </div>
                                 <div>
                                     <span class="text-sm text-mat-mid-blue uppercase">Adresse</span> <br>

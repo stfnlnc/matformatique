@@ -6,14 +6,17 @@ use App\Filament\Forms\Components\RichEditor\RichContentCustomBlocks\HeroBlock;
 use App\Models\Homepage;
 use BackedEnum;
 use Filament\Actions\Action;
-use Filament\Forms\Components\RichEditor;
-use Filament\Forms\Components\RichEditor\TextColor;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Form;
+use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * @property-read Schema $form
@@ -24,7 +27,7 @@ class ManageHomepage extends Page
 
     protected static ?string $modelLabel = 'accueil';
 
-    protected static ?string $title = "Accueil";
+    protected static ?string $title = "Page d'accueil";
 
     protected static ?string $navigationLabel = 'Accueil';
 
@@ -45,8 +48,35 @@ class ManageHomepage extends Page
         return $schema
             ->components([
                 Form::make([
-                    TextInput::make('hero_title'),
-                    TextInput::make('hero_paragraph'),
+                    Section::make('Section Hero')
+                        ->description('Gérez les éléments principaux de la page d\'accueil.')
+                        ->icon('heroicon-o-home')
+                        ->collapsible()
+                        ->schema([
+                            Grid::make(2)
+                                ->schema([
+                                    Grid::make(1)
+                                        ->columnSpan(1)
+                                        ->schema([
+                                            TextInput::make('hero_title')
+                                                ->label('Titre principal')
+                                                ->placeholder('Ex: Bienvenue sur notre site')
+                                                ->required(),
+
+                                            Textarea::make('hero_paragraph')
+                                                ->label('Paragraphe de description')
+                                                ->placeholder('Écrivez une courte description...')
+                                                ->rows(4),
+                                        ]),
+                                    FileUpload::make('hero_image')
+                                        ->label('Image de fond / Illustration')
+                                        ->disk('public')
+                                        ->directory('illustrations')
+                                        ->image()
+                                        ->imageEditor()
+                                        ->columnSpan(1),
+                                ]),
+                        ]),
                 ])
                     ->livewireSubmitHandler('save')
                     ->footer([

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->boolean('is_homepage')->default(false);
             $table->text('hero_title')->nullable();
             $table->text('hero_paragraph')->nullable();
+            $table->text('hero_image')->nullable();
             $table->timestamps();
         });
     }
