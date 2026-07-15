@@ -113,7 +113,8 @@
                             <a target="_blank" class="underline underline-offset-4" href="https://onzedigital.fr/">Onze
                                 Digital</a>
                         </p>
-                        <p><strong class="font-medium text-mat-mid-blue">Crédits illustrations :</strong> Sylvain Brosset
+                        <p><strong class="font-medium text-mat-mid-blue">Crédits illustrations :</strong>
+                            <a href="https://latelierdessine.fr/" target="_blank">Sylvain Brosset</a>
                         </p>
                         <p><strong class="font-medium text-mat-mid-blue">Crédits illustrations :</strong>
                             <a target="_blank" class="underline underline-offset-4"
