@@ -11,7 +11,7 @@ Route::name('main.')->group(function () {
 });
 
 Route::domain('services.matformatique.com')->group(function () {
-    Route::get('/service-a-la-personne', [MainController::class, 'services'])->name('services');
+    Route::get('/', [MainController::class, 'services'])->name('services');
 });
 
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
