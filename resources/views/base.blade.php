@@ -39,18 +39,18 @@
     <header class="fixed top-0 left-0 w-full py-5 z-9999 px-2">
         <nav
             class="relative bg-white rounded-lg container mx-auto py-1 px-1 min-h-12 flex flex-row items-center justify-between">
-            <a aria-label="Accueil Matformatique" href="{{ route('main.home') }}">
+            <a aria-label="Accueil Matformatique" href="{{ config('app.url') }}">
                 <img loading="lazy" class="absolute top-1/2 -translate-y-1/2 left-2 w-14"
                     src="./images/illustrations/logo-bot.png" alt="">
             </a>
             <div class="flex flex-row gap-1">
                 <div class="lg:flex hidden flex-row gap-1 px-2">
                     <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg"
-                        href="{{ route('main.home') }}#nos-services">Nos services</a>
+                        href="{{ config('app.url') }}#nos-services">Nos services</a>
                     <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg"
-                        href="{{ route('main.home') }}#notre-equipe">Notre équipe</a>
+                        href="{{ config('app.url') }}#notre-equipe">Notre équipe</a>
                     <a class="text-mat-dark-blue text-sm px-2.5 py-2 rounded-lg"
-                        href="{{ route('main.home') }}#vos-avis">Vos avis</a>
+                        href="{{ config('app.url') }}#vos-avis">Vos avis</a>
                 </div>
                 <x-button-dark href="#contact-form">Nous contacter</x-button-dark>
                 <x-button-light href="tel:0614341709">06.14.34.17.09</x-button-light>
@@ -102,9 +102,10 @@
             <div class="w-full border-t border-mat-mid-blue flex flex-col lg:flex-row lg:gap-10 gap-2 pt-2.5">
                 <p class="text-sm text-mat-mid-blue">© {{ date('Y') }} Matformatique. Tous droits réservés.</p>
                 <a class="text-sm text-mat-mid-blue hover:text-mat-light-blue transition-colors duration-300"
-                    href="{{ route('main.legal') }}">Mentions légales.</a>
+                    href="{{ config('app.url') }}{{ route('main.legal', [], false) }}">Mentions légales.</a>
                 <a class="text-sm text-mat-mid-blue hover:text-mat-light-blue transition-colors duration-300"
-                    href="{{ route('main.privacy') }}">Politique de confidentialité.</a>
+                    href="{{ config('app.url') }}{{ route('main.privacy', [], false) }}">Politique de
+                    confidentialité.</a>
             </div>
         </div>
     </footer>
