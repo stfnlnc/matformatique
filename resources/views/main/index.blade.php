@@ -150,7 +150,7 @@
                         Possibilité de prestation à domicile sous couvert du service à la personne par notre seconde
                         structure Matformatique Service
                     </p>
-                    <x-button-light :href="route('main.services')">En savoir plus</x-button-light>
+                    <x-button-light :href="route('services')">En savoir plus</x-button-light>
                 </div>
             </div>
         </div>
