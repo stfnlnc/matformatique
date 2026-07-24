@@ -106,6 +106,10 @@
                 <a class="text-sm text-mat-mid-blue hover:text-mat-light-blue transition-colors duration-300"
                     href="{{ config('app.url') }}{{ route('main.privacy', [], false) }}">Politique de
                     confidentialité.</a>
+                <a class="text-sm text-mat-mid-blue hover:text-mat-light-blue transition-colors duration-300"
+                    target="_blank" href="{{ asset('Conditions_Generales_MatFormatique_SARL.pdf') }}">Conditions
+                    générales de
+                    vente</a>
             </div>
         </div>
     </footer>

@@ -153,6 +153,17 @@
                     <x-button-light :href="route('services')">En savoir plus</x-button-light>
                 </div>
             </div>
+            <div
+                class="-mt-5 reveal-4 p-7.5 rounded-lg bg-white flex md:flex-row flex-col md:items-center items-start justify-start gap-5 md:gap-10">
+                <img loading="lazy"class="h-15 max-w-25 object-center object-contain w-fit"
+                    src="./images/logos/qualirepar.png" alt="">
+                <p class="text-sm text-mat-dark-blue text-justify max-w-4/5">
+                    En tant que professionnel labellisé QualiRépar, nous vous permettons de bénéficier du Bonus Réparation
+                    sur certaines réparations de vos équipements électroniques et informatiques éligibles. Ce label, soutenu
+                    par l'État, garantit des réparations réalisées par un professionnel qualifié tout en vous aidant à
+                    réduire le coût de la réparation et à prolonger la durée de vie de vos appareils.
+                </p>
+            </div>
         </div>
     </div>
     <div class="w-full bg-mat-gradient-light py-10">
@@ -190,8 +201,8 @@
                             </h2>
                             <div
                                 class="w-8 h-8 p-1 aspect-square bg-mat-light-blue rounded-full flex flex-row items-center justify-center leading-0 text-xl ml-auto">
-                                <svg class="toggle-plus" width="100%" height="100%" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg class="toggle-plus" width="100%" height="100%" viewBox="0 0 24 24"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap=""
                                         stroke-linejoin="round" />
                                 </svg>
