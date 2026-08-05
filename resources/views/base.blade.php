@@ -156,7 +156,8 @@
                     href="{{ config('app.url') }}{{ route('main.privacy', [], false) }}">Politique de
                     confidentialité.</a>
                 <a class="text-mat-mid-blue hover:text-mat-light-blue text-sm transition-colors duration-300"
-                    target="_blank" href="{{ asset('Conditions_Generales_MatFormatique_SARL.pdf') }}">Conditions
+                    target="_blank"
+                    href="{{ config('app.url') }}{{ asset('Conditions_Generales_MatFormatique_SARL.pdf') }}">Conditions
                     générales de vente.</a>
             </div>
         </div>
