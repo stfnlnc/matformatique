@@ -157,7 +157,7 @@
                     confidentialité.</a>
                 <a class="text-mat-mid-blue hover:text-mat-light-blue text-sm transition-colors duration-300"
                     target="_blank"
-                    href="{{ config('app.url') }}{{ asset('Conditions_Generales_MatFormatique_SARL.pdf') }}">Conditions
+                    href="{{ config('app.url') }}/Conditions_Generales_MatFormatique_SARL.pdf">Conditions
                     générales de vente.</a>
             </div>
         </div>
