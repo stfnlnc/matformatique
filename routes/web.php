@@ -16,3 +16,5 @@ Route::domain('services.matformatique.com')->group(function () {
 });
 
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+
+Route::get('/reviews', [MainController::class, 'apiReviews'])->name('api.reviews');

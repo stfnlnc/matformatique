@@ -42,4 +42,17 @@ class MainController extends Controller
     {
         return view("main.legal_service");
     }
+
+    public function apiReviews()
+    {
+        $path = "uploads/places/reviews.json";; // ou public_path() si tu le laisses dans public
+
+        if (!file_exists($path)) {
+            abort(404);
+        }
+
+        $data = json_decode(file_get_contents($path), true);
+
+        return response()->json($data);
+    }
 }
