@@ -198,7 +198,7 @@
                         Possibilité de prestation à domicile sous couvert du service à la personne par notre seconde
                         structure Matformatique Service
                     </p>
-                    <x-button-light :href="route('services')">En savoir plus</x-button-light>
+                    <x-button-light target="_blank" :href="route('services.home')">En savoir plus</x-button-light>
                 </div>
             </div>
             <div
@@ -658,7 +658,7 @@
                                     <x-star></x-star>
                                 @endfor
                             </div>
-                            <p class="text-white text-sm">
+                            <p class="text-white text-sm line-clamp-7">
                                 “{{ $review['text'] === '' ? "L'utilisateur a laissé une note de " . $review['rating'] . ' étoiles' : $review['text'] }}”
                             </p>
                             <div class="flex flex-col text-mat-light-blue text-sm">
@@ -678,7 +678,7 @@
                                     <x-star></x-star>
                                 @endfor
                             </div>
-                            <p class="text-white text-sm">
+                            <p class="text-white text-sm line-clamp-7">
                                 “{{ $review['text'] === '' ? "L'utilisateur a laissé une note de " . $review['rating'] . ' étoiles' : $review['text'] }}”
 
                             </p>
@@ -699,7 +699,7 @@
                                     <x-star></x-star>
                                 @endfor
                             </div>
-                            <p class="text-white text-sm">
+                            <p class="text-white text-sm line-clamp-7">
                                 “{{ $review['text'] === '' ? "L'utilisateur a laissé une note de " . $review['rating'] . ' étoiles' : $review['text'] }}”
 
                             </p>

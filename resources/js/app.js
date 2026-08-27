@@ -61,11 +61,18 @@ mm.add("(min-width: 800px)", () => {
     });
 });
 
-const marquees = document.querySelectorAll("animate-marquee");
+const marquees = document.querySelectorAll(".animate-marquee");
+
 marquees.forEach((marquee) => {
     marquee.addEventListener("mouseover", () => {
-        marquees.forEach((marquee) => {
-            marquee.style.anim;
+        marquees.forEach((m) => {
+            m.style.animationPlayState = "paused";
+        });
+    });
+
+    marquee.addEventListener("mouseout", () => {
+        marquees.forEach((m) => {
+            m.style.animationPlayState = "running";
         });
     });
 });

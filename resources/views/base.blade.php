@@ -45,10 +45,12 @@
             </a>
             <div class="flex flex-row gap-1">
                 <div class="hidden lg:flex flex-row gap-1 px-2">
-                    <a class="px-2.5 py-2 rounded-lg text-mat-dark-blue text-sm"
-                        href="{{ config('app.url') }}#nos-services">Nos services</a>
-                    <a class="px-2.5 py-2 rounded-lg text-mat-dark-blue text-sm"
-                        href="{{ config('app.url') }}#notre-equipe">Notre équipe</a>
+                    @if (!request()->routeIs('services.home') || !request()->routeIs('services.legal'))
+                        <a class="px-2.5 py-2 rounded-lg text-mat-dark-blue text-sm"
+                            href="{{ config('app.url') }}#nos-services">Nos services</a>
+                        <a class="px-2.5 py-2 rounded-lg text-mat-dark-blue text-sm"
+                            href="{{ config('app.url') }}#notre-equipe">Notre équipe</a>
+                    @endif
                     <a class="px-2.5 py-2 rounded-lg text-mat-dark-blue text-sm"
                         href="{{ config('app.url') }}#vos-avis">Vos avis</a>
                 </div>
@@ -150,8 +152,13 @@
             </div>
             <div class="flex lg:flex-row flex-col gap-2 lg:gap-10 pt-2.5 border-mat-mid-blue border-t w-full">
                 <p class="text-mat-mid-blue text-sm">© {{ date('Y') }} Matformatique. Tous droits réservés.</p>
-                <a class="text-mat-mid-blue hover:text-mat-light-blue text-sm transition-colors duration-300"
-                    href="{{ route('main.legal', [], false) }}">Mentions légales.</a>
+                @if (!request()->routeIs('services.home') || !request()->routeIs('services.legal'))
+                    <a class="text-mat-mid-blue hover:text-mat-light-blue text-sm transition-colors duration-300"
+                        href="{{ route('main.legal', [], false) }}">Mentions légales.</a>
+                @else
+                    <a class="text-mat-mid-blue hover:text-mat-light-blue text-sm transition-colors duration-300"
+                        href="{{ route('services.legal', [], false) }}">Mentions légales.</a>
+                @endif
                 <a class="text-mat-mid-blue hover:text-mat-light-blue text-sm transition-colors duration-300"
                     href="{{ config('app.url') }}{{ route('main.privacy', [], false) }}">Politique de
                     confidentialité.</a>

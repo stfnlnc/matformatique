@@ -10,9 +10,9 @@ Route::name('main.')->group(function () {
     Route::get('/politique-de-confidentialite', [MainController::class, 'privacyPolicy'])->name('privacy');
 });
 
-Route::domain('services.matformatique.com')->group(function () {
-    Route::get('/', [MainController::class, 'services'])->name('services');
-    Route::get('/mentions-legales', [MainController::class, 'legalNoticeService'])->name('main.legal');
+Route::name('services.')->domain('services.matformatique.com')->group(function () {
+    Route::get('/', [MainController::class, 'services'])->name('home');
+    Route::get('/mentions-legales', [MainController::class, 'legalNoticeService'])->name('legal');
 });
 
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');

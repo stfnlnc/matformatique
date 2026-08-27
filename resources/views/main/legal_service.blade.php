@@ -110,17 +110,9 @@
                     </p>
 
                     <div class="flex flex-col gap-2 mt-2 py-1 pl-4 border-mat-mid-blue/30 border-l-2">
-                        <p><strong class="font-medium text-mat-mid-blue">Crédits photographiques :</strong>
-                            <a target="_blank" class="underline underline-offset-4" href="https://onzedigital.fr/">Onze
-                                Digital</a>
-                        </p>
                         <p><strong class="font-medium text-mat-mid-blue">Crédits illustrations :</strong>
                             <a target="_blank" class="underline underline-offset-4"
                                 href="https://latelierdessine.fr/">Sylvain Brosset</a>
-                        </p>
-                        <p><strong class="font-medium text-mat-mid-blue">Crédits illustrations :</strong>
-                            <a target="_blank" class="underline underline-offset-4"
-                                href="https://couturedelphine.wixsite.com/ddou">Ddou</a>
                         </p>
                         <p><strong class="font-medium text-mat-mid-blue">Développement web :</strong>
                             <a target="_blank" class="underline underline-offset-4" href="https://stefanlancelot.com">Stéfan
