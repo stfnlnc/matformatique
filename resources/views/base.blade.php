@@ -45,7 +45,7 @@
             </a>
             <div class="flex flex-row gap-1">
                 <div class="hidden lg:flex flex-row gap-1 px-2">
-                    @if (!request()->routeIs('services.home') || !request()->routeIs('services.legal'))
+                    @if (request()->routeIs('main.*'))
                         <a class="px-2.5 py-2 rounded-lg text-mat-dark-blue text-sm"
                             href="{{ config('app.url') }}#nos-services">Nos services</a>
                         <a class="px-2.5 py-2 rounded-lg text-mat-dark-blue text-sm"
