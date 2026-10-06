@@ -1,0 +1,154 @@
+{
+    "html_attributions": [],
+    "result": {
+        "current_opening_hours": {
+            "open_now": true,
+            "periods": [
+                {
+                    "close": {
+                        "date": "2026-10-12",
+                        "day": 1,
+                        "time": "1800"
+                    },
+                    "open": {
+                        "date": "2026-10-12",
+                        "day": 1,
+                        "time": "0830"
+                    }
+                },
+                {
+                    "close": {
+                        "date": "2026-10-06",
+                        "day": 2,
+                        "time": "1800"
+                    },
+                    "open": {
+                        "date": "2026-10-06",
+                        "day": 2,
+                        "time": "0830"
+                    }
+                },
+                {
+                    "close": {
+                        "date": "2026-10-07",
+                        "day": 3,
+                        "time": "1800"
+                    },
+                    "open": {
+                        "date": "2026-10-07",
+                        "day": 3,
+                        "time": "0830"
+                    }
+                },
+                {
+                    "close": {
+                        "date": "2026-10-08",
+                        "day": 4,
+                        "time": "1800"
+                    },
+                    "open": {
+                        "date": "2026-10-08",
+                        "day": 4,
+                        "time": "0830"
+                    }
+                },
+                {
+                    "close": {
+                        "date": "2026-10-09",
+                        "day": 5,
+                        "time": "1800"
+                    },
+                    "open": {
+                        "date": "2026-10-09",
+                        "day": 5,
+                        "time": "0830"
+                    }
+                },
+                {
+                    "close": {
+                        "date": "2026-10-10",
+                        "day": 6,
+                        "time": "1230"
+                    },
+                    "open": {
+                        "date": "2026-10-10",
+                        "day": 6,
+                        "time": "1000"
+                    }
+                }
+            ],
+            "weekday_text": [
+                "lundi: 08:30\u2009\u2013\u200918:00",
+                "mardi: 08:30\u2009\u2013\u200918:00",
+                "mercredi: 08:30\u2009\u2013\u200918:00",
+                "jeudi: 08:30\u2009\u2013\u200918:00",
+                "vendredi: 08:30\u2009\u2013\u200918:00",
+                "samedi: 10:00\u2009\u2013\u200912:30",
+                "dimanche: Ferm\u00e9"
+            ]
+        },
+        "name": "Matformatique",
+        "rating": 4.9,
+        "reviews": [
+            {
+                "author_name": "E",
+                "author_url": "https:\/\/www.google.com\/maps\/contrib\/102140468572011161804\/reviews",
+                "language": "fr",
+                "original_language": "fr",
+                "profile_photo_url": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKar7pM43uwJFAq7Jj8-PNp_OnAIE33Y4ypIuXMzHQw_bbZog=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "il y a moins d'une semaine",
+                "text": "Tr\u00e8s bonne exp\u00e9rience avec Matformatique.\nIls ont r\u00e9par\u00e9 mon ordinateur portable qui avait pris l'eau dans un d\u00e9lai tr\u00e8s court et un prix tr\u00e8s raisonnable. Je les recommande.",
+                "time": 1790939254,
+                "translated": false
+            },
+            {
+                "author_name": "Marie-Pierre Silvestri",
+                "author_url": "https:\/\/www.google.com\/maps\/contrib\/114695268485983894580\/reviews",
+                "profile_photo_url": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocJ3lN6-Ki4l7LVIa4n-7lciMa0P7NJH2TCA74Y4IWxM6GqNoA=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "il y a moins d'une semaine",
+                "text": "",
+                "time": 1790798059,
+                "translated": false
+            },
+            {
+                "author_name": "Catherine Coisser",
+                "author_url": "https:\/\/www.google.com\/maps\/contrib\/100032375537584594040\/reviews",
+                "language": "fr",
+                "original_language": "fr",
+                "profile_photo_url": "https:\/\/lh3.googleusercontent.com\/a-\/ALV-UjV_ExZRpuDucTcusILFWfiK24KAZI8tEmvXDOCS14tYnCds9PPF=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "il y a une semaine",
+                "text": "Un accueil chaleureux\nEt personnel professionnel et surtout comp\u00e9tent.",
+                "time": 1790324144,
+                "translated": false
+            },
+            {
+                "author_name": "CHRISTIANE MOUNICOU",
+                "author_url": "https:\/\/www.google.com\/maps\/contrib\/104555648021735646969\/reviews",
+                "profile_photo_url": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL9Y9a4saB_9_f-Bhe4jn6haJYHKJ6lyAEfWWpRzsKi5DrqrQ=s128-c0x00000000-cc-rp-mo",
+                "rating": 4,
+                "relative_time_description": "il y a une semaine",
+                "text": "",
+                "time": 1790240640,
+                "translated": false
+            },
+            {
+                "author_name": "Nadege Durand",
+                "author_url": "https:\/\/www.google.com\/maps\/contrib\/107721018118790120826\/reviews",
+                "language": "fr",
+                "original_language": "fr",
+                "profile_photo_url": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKt09U1zSyLqYeqI7mFFn91PsbQI1TiUtIle3QgrSvZYdmw9g=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "il y a 2\u00a0semaines",
+                "text": "Une \u00e9quipe humaine, professionnelle et au top. Je recommande fortement.",
+                "time": 1789934989,
+                "translated": false
+            }
+        ],
+        "url": "https:\/\/maps.google.com\/?cid=12933581651481858605",
+        "user_ratings_total": 414
+    },
+    "status": "OK"
+}
