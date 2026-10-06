@@ -2,123 +2,179 @@
 
 namespace App\Filament\Pages;
 
-use App\Filament\Forms\Components\RichEditor\RichContentCustomBlocks\HeroBlock;
-use App\Models\Homepage;
+use App\Models\HomePage;
 use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Schemas\Components\Actions;
+use Filament\Schemas\Components\EmbeddedSchema;
 use Filament\Schemas\Components\Form;
-use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Tabs;
+use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Schema;
-use Illuminate\Support\Facades\Storage;
+use Filament\Support\Icons\Heroicon;
 
-/**
- * @property-read Schema $form
- */
-class ManageHomepage extends Page
+class ManageHomePage extends Page
 {
-    protected string $view = 'filament.pages.manage-homepage';
-
-    protected static ?string $modelLabel = 'accueil';
-
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedHome;
+    protected static ?string $navigationLabel = "Page d'accueil";
     protected static ?string $title = "Page d'accueil";
+    protected static ?string $slug = 'page-accueil';
 
-    protected static ?string $navigationLabel = 'Accueil';
-
-    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-tv';
-
-    /**
-     * @var array<string, mixed> | null
-     */
     public ?array $data = [];
 
     public function mount(): void
     {
-        $this->form->fill($this->getRecord()?->attributesToArray());
+        $this->form->fill(HomePage::current()->attributesToArray());
     }
 
     public function form(Schema $schema): Schema
     {
         return $schema
+            ->statePath('data')
             ->components([
-                Form::make([
-                    Section::make('Section Hero')
-                        ->description('Gérez les éléments principaux de la page d\'accueil.')
-                        ->icon('heroicon-o-home')
-                        ->collapsible()
-                        ->schema([
-                            Grid::make(2)
-                                ->schema([
-                                    Grid::make(1)
-                                        ->columnSpan(1)
-                                        ->schema([
-                                            TextInput::make('hero_title')
-                                                ->label('Titre principal')
-                                                ->placeholder('Ex: Bienvenue sur notre site')
-                                                ->required(),
+                Tabs::make('Sections')
+                    ->persistTabInQueryString()
+                    ->columnSpanFull()
+                    ->tabs([
+                        Tab::make('Présentation')->schema([
+                            Section::make('Titre')->columns(3)->schema([
+                                TextInput::make('hero_title_line1')->label('Ligne 1')->required(),
+                                TextInput::make('hero_title_line2')->label('Ligne 2')->required(),
+                                TextInput::make('hero_title_highlight')->label('Texte mis en avant (bleu)'),
+                            ]),
+                            Textarea::make('hero_text')->label("Texte d'introduction")->rows(3)->required(),
+                            Section::make('Chiffre « diagnostic »')->columns(2)->schema([
+                                TextInput::make('stat_diagnostic_value')->label('Valeur'),
+                                TextInput::make('stat_diagnostic_label')->label('Libellé'),
+                            ]),
+                        ]),
 
-                                            Textarea::make('hero_paragraph')
-                                                ->label('Paragraphe de description')
-                                                ->placeholder('Écrivez une courte description...')
-                                                ->rows(4),
-                                        ]),
-                                    FileUpload::make('hero_image')
-                                        ->label('Image de fond / Illustration')
-                                        ->disk('public')
-                                        ->directory('illustrations')
+                        Tab::make('Services')->schema([
+                            Section::make('En-tête')->columns(2)->schema([
+                                TextInput::make('services_title')->label('Titre'),
+                                TextInput::make('services_title_highlight')->label('Titre (partie en bleu)'),
+                                Textarea::make('services_intro')->label('Introduction (tarifs…)')->rows(3)->columnSpanFull(),
+                            ]),
+                            Repeater::make('services')
+                                ->label('Cartes de services')
+                                ->itemLabel(fn(array $state): ?string => $state['title'] ?? null)
+                                ->collapsible()
+                                ->collapsed()
+                                ->schema([
+                                    TextInput::make('title')->label('Titre')->required(),
+                                    FileUpload::make('image')
+                                        ->label('Illustration')
                                         ->image()
-                                        ->imageEditor()
-                                        ->columnSpan(1),
+                                        ->disk('public_folder')
+                                        ->directory('images/illustrations')
+                                        ->visibility('public'),
+                                    Repeater::make('items')
+                                        ->label('Liste à puces')
+                                        ->simple(TextInput::make('item')->required())
+                                        ->addActionLabel('Ajouter une ligne')
+                                        ->default([]),
+                                    Textarea::make('text')->label('Texte libre (à la place de la liste)')->rows(3),
+                                    TextInput::make('link_label')->label('Bouton : libellé'),
+                                    TextInput::make('link_url')->label('Bouton : URL')->url(),
+                                ]),
+                            Textarea::make('qualirepar_text')->label('Bandeau QualiRépar')->rows(5),
+                        ]),
+
+                        Tab::make('Étapes')->schema([
+                            Section::make('En-tête')->columns(2)->schema([
+                                TextInput::make('steps_title')->label('Titre'),
+                                TextInput::make('steps_title_highlight')->label('Titre (partie en bleu)'),
+                                Textarea::make('steps_intro')->label('Introduction')->rows(2)->columnSpanFull(),
+                            ]),
+                            Repeater::make('steps')
+                                ->label('Étapes (numérotées automatiquement)')
+                                ->itemLabel(fn(array $state): ?string => $state['title'] ?? null)
+                                ->collapsible()
+                                ->collapsed()
+                                ->schema([
+                                    TextInput::make('title')->label('Titre')->required(),
+                                    Textarea::make('content')->label('Description')->rows(5)->required(),
                                 ]),
                         ]),
-                ])
-                    ->livewireSubmitHandler('save')
-                    ->footer([
-                        Actions::make([
-                            Action::make('Sauvegarder')
-                                ->submit('save')
-                                ->keyBindings(['mod+s']),
+
+                        Tab::make('Marques')->schema([
+                            Repeater::make('brands')
+                                ->label('Marques')
+                                ->itemLabel(fn(array $state): ?string => $state['name'] ?? null)
+                                ->collapsible()
+                                ->columns(2)
+                                ->schema([
+                                    TextInput::make('name')->label('Nom')->required(),
+                                    FileUpload::make('logo')
+                                        ->label('Logo')
+                                        ->image()
+                                        ->disk('public_folder')
+                                        ->directory('images/logos')
+                                        ->visibility('public')
+                                        ->required(),
+                                ]),
+                        ]),
+
+                        Tab::make('Équipe')->schema([
+                            Section::make('En-tête')->columns(2)->schema([
+                                TextInput::make('team_title')->label('Titre'),
+                                TextInput::make('team_title_highlight')->label('Titre (partie en bleu)'),
+                                Textarea::make('team_intro')->label('Introduction')->rows(3)->columnSpanFull(),
+                            ]),
+                            Repeater::make('team')
+                                ->label('Membres')
+                                ->itemLabel(fn(array $state): ?string => $state['name'] ?? null)
+                                ->collapsible()
+                                ->collapsed()
+                                ->columns(3)
+                                ->schema([
+                                    TextInput::make('initials')->label('Initiales')->maxLength(3)->required(),
+                                    TextInput::make('name')->label('Nom')->required(),
+                                    TextInput::make('role')->label('Poste')->required(),
+                                    Textarea::make('bio')->label('Présentation')->rows(5)->columnSpanFull(),
+                                ]),
                         ]),
                     ]),
-            ])
-            ->record($this->getRecord())
-            ->statePath('data');
+            ]);
+    }
+
+    public function content(Schema $schema): Schema
+    {
+        return $schema->components([
+            Form::make([EmbeddedSchema::make('form')])
+                ->id('form')
+                ->livewireSubmitHandler('save')
+                ->footer([
+                    Actions::make($this->getFormActions())->sticky(),
+                ]),
+        ]);
+    }
+
+    /** @return array<Action> */
+    protected function getFormActions(): array
+    {
+        return [
+            Action::make('save')
+                ->label('Enregistrer')
+                ->submit('save')
+                ->keyBindings(['mod+s']),
+        ];
     }
 
     public function save(): void
     {
-        $data = $this->form->getState();
-
-        $record = $this->getRecord();
-
-        if (! $record) {
-            $record = new Homepage();
-            $record->is_homepage = true;
-        }
-
-        $record->fill($data);
-        $record->save();
-
-        if ($record->wasRecentlyCreated) {
-            $this->form->record($record)->saveRelationships();
-        }
+        HomePage::current()->update($this->form->getState());
 
         Notification::make()
+            ->title("Page d'accueil enregistrée")
             ->success()
-            ->title('Sauvegardé')
             ->send();
-    }
-
-    public function getRecord(): ?Homepage
-    {
-        return Homepage::query()
-            ->where('is_homepage', true)
-            ->first();
     }
 }

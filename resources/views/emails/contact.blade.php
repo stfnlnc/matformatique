@@ -61,8 +61,8 @@
                                 <span
                                     style="display: block; font-size: 12px; font-weight: 600; color: #486da5; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Message</span>
                                 <p
-                                    style="margin: 0; font-size: 15px; color: #08286c; line-height: 1.6; white-space: pre-line;">
-                                    {{ $contact->message }}</p>
+                                    style="margin: 0; font-size: 15px; color: #08286c; line-height: 0.6; white-space: pre-line;">
+                                    {!! nl2br(e($contact->message)) !!}</p>
                             </div>
 
                         </td>

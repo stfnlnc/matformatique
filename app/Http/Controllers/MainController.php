@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HomePage;
+use App\Models\Information;
 use App\Models\Supremo;
 use App\Services\PlacesServices;
 
@@ -14,6 +16,8 @@ class MainController extends Controller
     {
         $this->placesService->savePlacesApiDetails();
         $software = Supremo::first();
+        $page = HomePage::current();
+        $info = Information::current();
 
         return view('main.index', [
             'years' => $this->placesService->getSinceDate(),
@@ -22,7 +26,9 @@ class MainController extends Controller
             'mapsUrl' => $this->placesService->getMapsUrl(),
             'reviews' => $this->placesService->getReviews(),
             'openingHours' => $this->placesService->getOpeningHours(),
-            'software' => $software
+            'software' => $software,
+            'page' => $page,
+            'info' => $info
         ]);
     }
 

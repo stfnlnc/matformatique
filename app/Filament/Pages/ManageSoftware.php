@@ -54,13 +54,10 @@ class ManageSoftware extends Page
                         ->hintIcon('heroicon-o-paper-clip')
                         ->hint('Télécharger le fichier .dmg')
                         ->preserveFilenames(),
-                    FileUpload::make('file_macos_instructions')
-                        ->label('Instructions macOS')
-                        ->disk('public_folder')
-                        ->visibility('public')
-                        ->hintIcon('heroicon-o-paper-clip')
-                        ->hint('Télécharger le fichier d\'instructions')
-                        ->preserveFilenames(),
+                    TextInput::make('file_macos_instructions')
+                        ->label('Instructions Supremo macOS')
+                        ->placeholder('Lien des instructions')
+                        ->maxLength(150),
                     FileUpload::make('file_matcleaner')
                         ->label('MatCleaner')
                         ->disk('public_folder')
