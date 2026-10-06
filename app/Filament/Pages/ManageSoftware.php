@@ -6,6 +6,7 @@ use App\Models\Supremo;
 use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Schemas\Components\Actions;
@@ -31,7 +32,7 @@ class ManageSoftware extends Page
 
     public function mount(): void
     {
-        $this->form->fill($this->getRecord()?->attributesToArray());
+        $this->form->fill($this->getRecord()?->attributesToArray() ?? []);
     }
 
     public function form(Schema $schema): Schema
@@ -49,15 +50,28 @@ class ManageSoftware extends Page
                     FileUpload::make('file_macos')
                         ->label('macOS')
                         ->disk('public_folder')
+                        ->visibility('public')
                         ->hintIcon('heroicon-o-paper-clip')
                         ->hint('Télécharger le fichier .dmg')
                         ->preserveFilenames(),
                     FileUpload::make('file_macos_instructions')
                         ->label('Instructions macOS')
                         ->disk('public_folder')
+                        ->visibility('public')
                         ->hintIcon('heroicon-o-paper-clip')
                         ->hint('Télécharger le fichier d\'instructions')
                         ->preserveFilenames(),
+                    FileUpload::make('file_matcleaner')
+                        ->label('MatCleaner')
+                        ->disk('public_folder')
+                        ->visibility('public')
+                        ->hintIcon('heroicon-o-paper-clip')
+                        ->hint('Télécharger MatCleaner')
+                        ->preserveFilenames(),
+                    TextInput::make('file_matcleaner_ver')
+                        ->label('Version MatCleaner')
+                        ->placeholder('1.0.0')
+                        ->maxLength(50),
                 ])
                     ->livewireSubmitHandler('save')
                     ->footer([
@@ -76,19 +90,9 @@ class ManageSoftware extends Page
     {
         $data = $this->form->getState();
 
-        $record = $this->getRecord();
-
-        if (! $record) {
-            $record = new Supremo();
-            $record->file_windows = true;
-        }
-
+        $record = $this->getRecord() ?? new Supremo();
         $record->fill($data);
         $record->save();
-
-        if ($record->wasRecentlyCreated) {
-            $this->form->record($record)->saveRelationships();
-        }
 
         Notification::make()
             ->success()
@@ -98,8 +102,6 @@ class ManageSoftware extends Page
 
     public function getRecord(): ?Supremo
     {
-        return Supremo::query()
-            ->where('file_windows', true)
-            ->first();
+        return Supremo::query()->first();
     }
 }

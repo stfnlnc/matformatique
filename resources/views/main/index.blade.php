@@ -80,19 +80,24 @@
                 <span class="motion-safe:animate-pulse">●</span> {{ $openingHours }}
             </p>
             <div class="hidden right-0 bottom-8 absolute lg:flex flex-col gap-1 bg-white p-1 rounded-lg">
-                <div
-                    class="flex flex-col bg-mat-light-blue px-10 py-2 rounded-xl text-mat-dark-blue text-xs md:text-sm text-center">
-                    <p class="text-mat-dark-blue text-xs md:text-sm">Assistance à distance</p>
-                    <p class="mb-2 text-mat-dark-blue text-2xl uppercase">Windows</p>
-                    <x-button-white href="./Matformatique.exe">Télécharger</x-button-white>
-                </div>
-                <div
-                    class="flex flex-col bg-mat-dark-blue px-10 py-2 rounded-xl text-mat-light-blue text-xs md:text-sm text-center">
-                    <p class="text-mat-light-blue text-xs md:text-sm">Assistance à distance</p>
-                    <p class="mb-2 text-mat-light-blue text-2xl uppercase">macOS</p>
-                    <x-button-white class="hover:shadow-mat-light-blue hover:shadow-sm transition-all duration-300"
-                        href="./Supremo.dmg">Télécharger</x-button-white>
-                </div>
+                @if ($software?->file_windows)
+                    <div
+                        class="flex flex-col bg-mat-light-blue px-10 py-2 rounded-xl text-mat-dark-blue text-xs md:text-sm text-center">
+                        <p class="text-mat-dark-blue text-xs md:text-sm">Assistance à distance</p>
+                        <p class="mb-2 text-mat-dark-blue text-2xl uppercase">Windows</p>
+                        <x-button-white href="{{ asset($software->file_windows) }}">Télécharger</x-button-white>
+                    </div>
+                @endif
+
+                @if ($software?->file_macos)
+                    <div
+                        class="flex flex-col bg-mat-dark-blue px-10 py-2 rounded-xl text-mat-light-blue text-xs md:text-sm text-center">
+                        <p class="text-mat-light-blue text-xs md:text-sm">Assistance à distance</p>
+                        <p class="mb-2 text-mat-light-blue text-2xl uppercase">macOS</p>
+                        <x-button-white class="hover:shadow-mat-light-blue hover:shadow-sm transition-all duration-300"
+                            href="{{ asset($software->file_macos) }}">Télécharger</x-button-white>
+                    </div>
+                @endif
             </div>
 
         </div>

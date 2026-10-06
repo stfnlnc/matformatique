@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Supremo;
 use App\Services\PlacesServices;
 
 class MainController extends Controller
@@ -12,6 +13,7 @@ class MainController extends Controller
     public function index()
     {
         $this->placesService->savePlacesApiDetails();
+        $software = Supremo::first();
 
         return view('main.index', [
             'years' => $this->placesService->getSinceDate(),
@@ -19,7 +21,8 @@ class MainController extends Controller
             'rating' => $this->placesService->getRating(),
             'mapsUrl' => $this->placesService->getMapsUrl(),
             'reviews' => $this->placesService->getReviews(),
-            'openingHours' => $this->placesService->getOpeningHours()
+            'openingHours' => $this->placesService->getOpeningHours(),
+            'software' => $software
         ]);
     }
 
