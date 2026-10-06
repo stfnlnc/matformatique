@@ -42,6 +42,7 @@ class ManageSoftware extends Page
                     FileUpload::make('file_windows')
                         ->label('Windows')
                         ->disk('public_folder')
+                        ->visibility('public')
                         ->hint('Télécharger le fichier .exe')
                         ->hintIcon('heroicon-o-paper-clip')
                         ->preserveFilenames(),
