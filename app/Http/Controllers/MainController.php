@@ -37,20 +37,6 @@ class MainController extends Controller
         return view("main.services");
     }
 
-    public function legalNotice()
-    {
-        return view("main.legal");
-    }
-
-    public function privacyPolicy()
-    {
-        return view("main.privacy");
-    }
-
-    public function legalNoticeService()
-    {
-        return view("main.legal_service");
-    }
 
     public function apiReviews()
     {

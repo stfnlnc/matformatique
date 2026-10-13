@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LegalPageController;
 use App\Http\Controllers\MainController;
 use App\Models\Supremo;
 use Illuminate\Support\Facades\Route;
@@ -8,13 +9,19 @@ use Illuminate\Support\Facades\Storage;
 
 Route::name('main.')->group(function () {
     Route::get('/', [MainController::class, 'index'])->name('home');
-    Route::get('/mentions-legales', [MainController::class, 'legalNotice'])->name('legal');
-    Route::get('/politique-de-confidentialite', [MainController::class, 'privacyPolicy'])->name('privacy');
+    Route::get('/mentions-legales', LegalPageController::class)
+        ->defaults('key', 'mentions_legales')
+        ->name('legal');
+    Route::get('/politique-de-confidentialite', LegalPageController::class)
+        ->defaults('key', 'politique_confidentialite')
+        ->name('privacy');
 });
 
 Route::name('services.')->domain('services.matformatique.com')->group(function () {
     Route::get('/', [MainController::class, 'services'])->name('home');
-    Route::get('/mentions-legales', [MainController::class, 'legalNoticeService'])->name('legal');
+    Route::get('/mentions-legales', LegalPageController::class)
+        ->defaults('key', 'mentions_legales_service')
+        ->name('legal');
 });
 
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
