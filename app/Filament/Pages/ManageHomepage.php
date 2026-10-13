@@ -23,6 +23,7 @@ use Filament\Support\Icons\Heroicon;
 class ManageHomePage extends Page
 {
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedHome;
+    protected static string | BackedEnum | null $activeNavigationIcon = Heroicon::Home;
     protected static ?string $navigationLabel = "Page d'accueil";
     protected static ?string $title = "Page d'accueil";
     protected static ?string $slug = 'page-accueil';

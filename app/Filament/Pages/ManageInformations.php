@@ -20,6 +20,7 @@ use Filament\Support\Icons\Heroicon;
 class ManageInformations extends Page
 {
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedInformationCircle;
+    protected static string | BackedEnum | null $activeNavigationIcon = Heroicon::InformationCircle;
     protected static ?string $navigationLabel = 'Informations';
     protected static ?string $title = 'Informations générales';
     protected static ?string $slug = 'informations';

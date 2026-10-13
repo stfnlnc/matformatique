@@ -25,6 +25,7 @@ use Filament\Support\Icons\Heroicon;
 class ManageLegalPages extends Page
 {
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedScale;
+    protected static string | BackedEnum | null $activeNavigationIcon = Heroicon::Scale;
 
     protected static ?string $navigationLabel = 'Pages légales';
 

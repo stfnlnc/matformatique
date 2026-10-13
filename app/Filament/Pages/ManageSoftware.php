@@ -12,6 +12,7 @@ use Filament\Pages\Page;
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Form;
 use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
 
 class ManageSoftware extends Page
 {
@@ -28,7 +29,8 @@ class ManageSoftware extends Page
     protected static ?string $navigationLabel = 'Logiciels';
 
 
-    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-paper-clip';
+    protected static string | BackedEnum | null $navigationIcon = Heroicon::OutlinedPaperClip;
+    protected static string | BackedEnum | null $activeNavigationIcon = Heroicon::PaperClip;
 
     public function mount(): void
     {
