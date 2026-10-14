@@ -41,6 +41,6 @@ Route::get('/api/software', function () {
         'matcleaner' => $software->file_matcleaner ? $disk->url($software->file_matcleaner) : null,
         'windows_url' => $software->file_windows ? $disk->url($software->file_windows) : null,
         'macos_url' => $software->file_macos ? $disk->url($software->file_macos) : null,
-        'macos_instructions_url' => $software->file_macos_instructions ? $disk->url($software->file_macos_instructions) : null,
+        'macos_instructions_url' => $software->file_macos_instructions ? $software->file_macos_instructions : null,
     ]);
 });

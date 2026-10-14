@@ -110,6 +110,7 @@ class ManageHomePage extends Page
                                 ->label('Marques')
                                 ->itemLabel(fn(array $state): ?string => $state['name'] ?? null)
                                 ->collapsible()
+                                ->collapsed(true)
                                 ->columns(2)
                                 ->schema([
                                     TextInput::make('name')->label('Nom')->required(),

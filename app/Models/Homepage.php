@@ -3,10 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class HomePage extends Model
 {
     protected $guarded = [];
+
+    private const FILE_FIELDS = [
+        'services' => 'image',
+        'brands'   => 'logo',
+    ];
+
 
     protected function casts(): array
     {
@@ -107,5 +114,47 @@ class HomePage extends Model
             'contact_title_highlight' => "d'aide ?",
             'contact_intro' => "Que ce soit pour une réparation urgente ou juste un conseil, on est là.\nAppelez-nous, passez à l'atelier, ou envoyez-nous un message. On s'occupe du reste.",
         ];
+    }
+
+    protected static function booted(): void
+    {
+        static::updated(function (HomePage $page) {
+            foreach (self::FILE_FIELDS as $field => $key) {
+                if (! $page->wasChanged($field)) {
+                    continue;
+                }
+
+                $old = self::extractFiles($page->getOriginal($field), $key);
+                $new = self::extractFiles($page->{$field}, $key);
+
+                $orphans = array_values(array_diff($old, $new));
+
+                if ($orphans !== []) {
+                    Storage::disk('public_folder')->delete($orphans);
+                }
+            }
+        });
+
+        static::deleted(function (HomePage $page) {
+            foreach (self::FILE_FIELDS as $field => $key) {
+                $files = self::extractFiles($page->{$field}, $key);
+
+                if ($files !== []) {
+                    Storage::disk('public_folder')->delete($files);
+                }
+            }
+        });
+    }
+
+    /** @return array<int, string> */
+    private static function extractFiles(mixed $items, string $key): array
+    {
+        return collect($items ?? [])
+            ->pluck($key)
+            ->flatten()
+            ->filter()
+            ->unique()
+            ->values()
+            ->all();
     }
 }
