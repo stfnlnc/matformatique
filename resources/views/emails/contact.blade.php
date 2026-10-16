@@ -60,9 +60,8 @@
                             <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px;">
                                 <span
                                     style="display: block; font-size: 12px; font-weight: 600; color: #486da5; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Message</span>
-                                <div
-                                    style="margin: 0; font-size: 15px; color: #08286c; line-height: 0.6; white-space: pre-line;">
-                                    {!! nl2br(e($contact->message)) !!}
+                                <div style="margin: 0; font-size: 15px; color: #08286c; line-height: 0.6;">
+                                    {{ nl2br(e($contact->message)) }}
                                 </div>
                             </div>
 
