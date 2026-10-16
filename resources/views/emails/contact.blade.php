@@ -63,8 +63,6 @@
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                         <td style="background-color: #f8fafc; padding: 20px; border-radius: 8px;">
-                                            <span
-                                                style="display: block; font-size: 12px; font-weight: 600; color: #486da5; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Message</span>
                                             <p style="margin: 0; font-size: 15px; color: #08286c; line-height: 1.6;">
                                                 {!! nl2br(e($contact->message)) !!}
                                             </p>
