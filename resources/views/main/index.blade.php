@@ -3,7 +3,7 @@
 @section('title', 'Assistance et dépannage informatique')
 
 @section('head')
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 @endsection
 
 @section('content')
@@ -451,8 +451,9 @@
                                     </div>
 
                                     <div class="flex flex-col gap-2.5 my-2">
-                                        <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
-                                        @error('g-recaptcha-response')
+                                        <div class="cf-turnstile"
+                                            data-sitekey="{{ config('services.turnstile.site_key') }}"></div>
+                                        @error('cf-turnstile-response')
                                             <span style="color: red;">{{ $message }}</span>
                                         @enderror
                                     </div>

@@ -19,20 +19,30 @@ class ContactRequest extends FormRequest
             'phone'   => ['nullable', 'string', 'regex:/^([0-9\s\-\+\(\)]*)$/', 'min:10'],
             'email'   => ['required', 'email', 'max:255'],
             'message' => ['required', 'string', 'min:10'],
-            'g-recaptcha-response' => [
+            'cf-turnstile-response' => [
                 'required',
                 function ($attribute, $value, $fail) {
-                    $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-                        'secret'   => env('RECAPTCHA_SECRET_KEY'),
-                        'response' => $value,
-                        'remoteip' => $this->ip(),
-                    ]);
+                    $response = Http::asForm()->post(
+                        'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+                        [
+                            'secret'   => config('services.turnstile.secret_key'),
+                            'response' => $value,
+                            'remoteip' => $this->ip(),
+                        ]
+                    );
 
-                    if (!$response->json('success')) {
-                        $fail('La vérification du reCAPTCHA a échoué. Veuillez réessayer.');
+                    if (! $response->json('success')) {
+                        $fail('La vérification anti-robot a échoué. Veuillez réessayer.');
                     }
                 },
             ],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'cf-turnstile-response.required' => 'Veuillez valider la vérification anti-robot.',
         ];
     }
 
