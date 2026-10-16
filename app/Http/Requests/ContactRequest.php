@@ -45,11 +45,4 @@ class ContactRequest extends FormRequest
             'cf-turnstile-response.required' => 'Veuillez valider la vérification anti-robot.',
         ];
     }
-
-    public function messages(): array
-    {
-        return [
-            'g-recaptcha-response.required' => 'Veuillez cocher la case "Je ne suis pas un robot".',
-        ];
-    }
 }
