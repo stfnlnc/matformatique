@@ -110,7 +110,6 @@
                     </div>
                 @endif
             </div>
-
         </div>
     </div>
     <div class="bg-mat-dark-blue px-15 py-10 w-full">
@@ -140,6 +139,12 @@
                     pour un diagnostic
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="bg-mat-gradient-light pt-30 w-full">
+        <div class="mx-auto px-4 w-full container">
+            <img loading="lazy" class="rounded-lg w-full object-center object-cover aspect-13/6"
+                src="./images/photos/photo-matformatique.jpg" alt="">
         </div>
     </div>
     <div id="nos-services" class="bg-mat-gradient-light py-30 w-full">
@@ -198,12 +203,8 @@
             </div>
         </div>
     </div>
-    <div class="bg-mat-gradient-light py-10 w-full">
-        <div class="mx-auto px-4 w-full container">
-            <img loading="lazy" class="rounded-lg w-full object-center object-cover aspect-13/6"
-                src="./images/photos/photo-matformatique.jpg" alt="">
-        </div>
-    </div>
+
+    <x-repair-tabs :page="$page" :info="$info" />
     <div class="relative bg-mat-gradient-light md:py-30 pt-30 pb-70 w-full">
         <img loading="lazy" class="right-0 bottom-0 z-0 absolute w-80" src="./images/illustrations/angle-droit.png"
             alt="">
