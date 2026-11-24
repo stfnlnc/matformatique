@@ -205,6 +205,7 @@
     </div>
 
     <x-repair-tabs :page="$page" :info="$info" />
+
     <div class="relative bg-mat-gradient-light md:py-30 pt-30 pb-70 w-full">
         <img loading="lazy" class="right-0 bottom-0 z-0 absolute w-80" src="./images/illustrations/angle-droit.png"
             alt="">

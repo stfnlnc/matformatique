@@ -76,15 +76,15 @@
         @foreach ($tabs as $tab)
             <div role="tabpanel" id="{{ $tab['id'] }}" aria-labelledby="tab-{{ $tab['id'] }}"
                 @if (!$loop->first) hidden @endif
-                class="relative flex items-center rounded-lg w-full min-h-125 lg:min-h-0 lg:aspect-video overflow-hidden">
+                class="relative flex flex-col items-center lg:flex-row gap-4 rounded-lg w-full min-h-125 lg:min-h-0 lg:aspect-video overflow-hidden">
 
-                <img loading="lazy" class="absolute inset-0 rounded-lg w-full h-full object-center object-cover"
+                <img loading="lazy" class="lg:absolute inset-0 rounded-lg w-full h-full object-center object-cover"
                     src="{{ asset($tab['image']) }}" alt="{{ $tab['alt'] }}">
 
-                <div class="top-0 -left-1 absolute bg-white/80 w-full xl:w-2/5 h-full pointer-events-none"></div>
+                <div class="top-0 -left-1 absolute lg:bg-white/80 w-full lg:w-2/5 h-full pointer-events-none"></div>
 
-                <div class="relative z-10 flex flex-col items-start gap-5 p-7.5 md:p-12.5 lg:p-16 w-full xl:w-2/5">
-                    <h2 class="max-w-3xl text-ink text-4xl md:text-5xl">
+                <div class="relative z-10 flex flex-col items-start gap-5 p-2 md:p-4 lg:p-8 xl:p-16 w-full lg:w-2/5">
+                    <h2 class="max-w-3xl text-ink text-xl md:text-4xl xl:text-5xl">
                         {{ $tab['title'] }} <span class="text-accent">{{ $tab['highlight'] }}</span>
                     </h2>
                     <p class="max-w-prose text-ink text-sm">{{ $tab['text'] }}</p>
